@@ -1,0 +1,103 @@
+.blog img {
+  width: 100%;
+  height: 100%;
+}
+.blog .text {
+  padding: 40px 30px;
+}
+.blog h1 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 20px 0;
+  transition: 0.5s;
+}
+.blog h1:hover {
+  color: #45A29E;
+  cursor: pointer;
+}
+.blog span {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #45A29E;
+}
+.blog span label {
+  margin-left: 10px;
+  color: #1F2833;
+  font-size: 14px;
+}
+.blog span:nth-last-child(1) label {
+  color: #45A29E;
+}
+.blog p {
+  color: #1F2833;
+}
+
+.button-35 {
+  align-items: center;
+  background-color: #0B0C10;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #C5C6C7;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+ margin-left: 90%;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  
+  .button-35:hover {
+  box-shadow: #45A29E 0 0 0 3px, transparent 0 0 0 0;
+  }
+  
+  .button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+  }
+  
+  .button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+  transform
+  250ms
+  cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+  }
+  
+  .button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+  transform
+  250ms
+  cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+  }
+  
+  .button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+  }
