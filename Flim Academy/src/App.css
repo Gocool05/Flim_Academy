@@ -131,7 +131,6 @@ p {
 .margin {
   margin-top: 40.3%;
 }
-
 .flex {
   display: flex;
 }
@@ -182,5 +181,17 @@ p {
     background-position: center;
     padding-top: 50%;
     height: 80vh;
+  }
+  .back h1 {
+    font-size: 60px;
+    font-weight: 400;
+   /* margin-top: 150px; */
+  }
+  .back h2 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 150px;
+    color: #C5C6C7;
+    text-transform: uppercase;
   }
 }

@@ -20,6 +20,42 @@
   margin: 0;
   padding: 0;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 0.5 opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+  z-index: 1; /* Ensure content is above overlay */
+}
+
+p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #2980b9;
+}
+
 @media screen and (max-width: 768px) {
   .margin {
     height: 40vh;

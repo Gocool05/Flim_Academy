@@ -15,7 +15,7 @@ const Faq = () => {
   return (
     <>
       <Heading subtitle='FAQS' title='Frequesntly Ask Question' />
-      <section className='faq'>
+      <section className='faq' style={{ marginBottom: "4rem" }}>
         <div className='container'>
           {faq.map((val, index) => (
             <div className='box'>

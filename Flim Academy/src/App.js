@@ -29,7 +29,7 @@ function App() {
           <Route exact path='/about' component={About} />
           <Route exact path='/courses' component={CourseHome} />
           <Route exact path='/team' component={Team} />
-          <Route exact path='/pricing' component={Pricing} />
+          <Route exact path='/faq' component={Pricing} />
           <Route exact path='/contest' component={Blog} />
           <Route exact path='/contact' component={Contact} />
         </Switch>

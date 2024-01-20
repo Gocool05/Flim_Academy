@@ -2,9 +2,15 @@ import {React, useState} from "react"
 import Back from "../common/back/Back"
 import BlogCard from "./BlogCard"
 import "./blog.css"
-import { TextField, Chip,Button, Select, MenuItem, FormControl, InputLabel, Container, Typography } from '@mui/material';
+import { TextField, Chip,Button, Select, MenuItem, FormControl, InputLabel, Container, Typography, Box } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import axios from "axios";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  LinearProgress,
+} from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
@@ -21,43 +27,195 @@ const theme = createTheme({
 
 
 const Blog = () => {
-  const [formData, setFormData] = useState({
-    movieName: '',
-    description: '',
-    moviePoster: null,
-    videoFile: null,
-    language:'',
-    genre:[],
-    actorName: '',
-    actressName: '',
-    directorName: '',
-    contentRating: '',
-    duration: '',
-  });
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [movieName, setMovieName] = useState("");
+  const [description, setDescription] = useState("");
+  const [language, setLanguage] = useState("");
+  const [genre, setGenre] = useState("");
+  const [actorName, setActorName] = useState("");
+  const [directorName, setDirectorName] = useState("");
+  const [contentRating, setContentRating] = useState("");
+  const [duration, setDuration] = useState("");
+  const [videoUpload, setVideoUpload] = useState(null);
+  const [imageUpload, setImageUpload] = useState(null);
+  const [imageUpload1, setImageUpload1] = useState(null);
+  const [fileUploadProgress, setFileUploadProgress] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
+  const [activeStep, setActiveStep] = useState(1);
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    switch (name) {
+      case "userName":
+        setUserName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "mobile":
+        setMobile(value);
+        break;
+      case "movieName":
+        setMovieName(value);
+        break;
+      case "description":
+        setDescription(value);
+        break;
+      case "language":
+        setLanguage(value);
+        break;
+      case "genre":
+        setGenre(value);
+        break;
+      case "actorName":
+        setActorName(value);
+        break;
+      case "directorName":
+        setDirectorName(value);
+        break;
+      case "contentRating":
+        setContentRating(value);
+        break;
+      case "duration":
+        setDuration(value);
+        break;
+      default:
+        break;
+    }
   };
 
-  const handleVideoChange = (e) => {
-    setFormData({ ...formData, videoFile: e.target.files[0] });
+  const handleVideoUpload = (event) => {
+    const file = event.target.files[0];
+    setVideoUpload(file);
   };
-  const handleImgChange = (e) => {
-    setFormData({ ...formData, moviePoster: e.target.files[0] });
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    setImageUpload(file);
+  };
+  const handleImageUpload1 = (event) => {
+    const file = event.target.files[0];
+    setImageUpload1(file);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+  const handleNextStep = () => {
+    setActiveStep((prevStep) => prevStep + 1);
   };
 
 
-  const handleGenreChange = (e) => {
-    setFormData({ ...formData, genre: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send formData to backend (you can use Axios or fetch)
-    console.log('Form submitted:', formData);
-    // Add logic to send data to the backend using Strapi
+    if (
+      userName &&
+      email &&
+      mobile &&
+      movieName &&
+      description &&
+      language &&
+      genre &&
+      actorName &&
+      directorName &&
+      contentRating &&
+      duration
+    ) {
+      setOpenModal(true);
+    try {
+      const response = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/forms', {
+    data:{
+      userName: userName,
+      mobileNumber: mobile,
+      email: email,
+      MovieName: movieName,
+      Description: description,
+      Language: language,
+      Genres: genre,
+      Actors: actorName,
+      Directors: directorName,
+      contentRating: contentRating,
+      Duration: duration,
+    }
+    });
+    console.log(response);
+    const formId = response.data.data.id;
+    console.log(formId);
+    localStorage.setItem("formId",formId);
+    }
+    catch (err) {
+      alert("Enter valid credentials", err);
+    }
+  } else {
+    alert("Please fill in all the fields");
+  }
   };
+
+
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append('files', videoUpload);
+    formData.append('refId',localStorage.getItem("formId"))
+      formData.append('ref','api::form.form')
+      formData.append('field',"VideoFile")
+  
+    // Handle video upload
+    try {
+      const videoResponse = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+  
+      // Handle success or error for video upload
+      console.log('Video upload response:', videoResponse);
+    } catch (error) {
+      console.error('Error uploading video:', error);
+      // Handle error, e.g., show a message to the user
+    }
+  
+    // Reset progress before starting image uploads
+    setFileUploadProgress(0);
+  
+    // Handle image uploads (assuming you have two imageUpload variables)
+    const imageFormDatas = [imageUpload,imageUpload1];
+  
+    for (let i = 0; i < imageFormDatas.length; i++) {
+      const imageFormData = new FormData();
+      imageFormData.append('files', imageFormDatas[i]);
+      imageFormData.append('refId',localStorage.getItem("formId"))
+      imageFormData.append('ref','api::form.form')
+      if(i==0){
+        imageFormData.append('field',"MoviePoster")
+      }
+      else{
+        imageFormData.append('field',"MovieThumbnail")
+      }
+      // Handle image upload
+      try {
+        const imageResponse = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/upload', imageFormData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+  
+        // Handle success or error for each image upload
+        console.log(`Image ${i + 1} upload response:`, imageResponse);
+      } catch (error) {
+        console.error(`Error uploading image ${i + 1}:`, error);
+        // Handle error, e.g., show a message to the user
+      }
+  
+      // Update progress after each image upload
+      setFileUploadProgress(((i + 1) / imageFormDatas.length) * 100);
+    }
+  
+    // All uploads completed
+    console.log('All uploads completed');
+  };
+  
   return (
     <>
     <ThemeProvider theme={theme}>
@@ -68,11 +226,43 @@ const Blog = () => {
         Film Submission Form
       </Typography>
       <form onSubmit={handleSubmit}>
+      <TextField
+          label="Your Name"
+          name="userName"
+          value={userName}
+          onChange={handleInputChange}
+          fullWidth
+          color="secondary"
+          margin="normal"
+          required
+        />
+          <TextField
+          label="Mobile Number"
+          name="mobile"
+          type="number"
+          value={mobile}
+          onChange={handleInputChange}
+          fullWidth
+          color="secondary"
+          margin="normal"
+          required
+        />
+          <TextField
+          label="Your Email"
+          name="email"
+          type="email"
+          value={email}
+          onChange={handleInputChange}
+          fullWidth
+          color="secondary"
+          margin="normal"
+          required
+        />
         <TextField
           label="Movie Name"
           name="movieName"
-          value={formData.movieName}
-          onChange={handleChange}
+          value={movieName}
+          onChange={handleInputChange}
           fullWidth
           color="secondary"
           margin="normal"
@@ -81,8 +271,8 @@ const Blog = () => {
         <TextField
           label="Description"
           name="description"
-          value={formData.description}
-          onChange={handleChange}
+          value={description}
+          onChange={handleInputChange}
           fullWidth
           color="secondary"
           multiline
@@ -95,8 +285,8 @@ const Blog = () => {
           <Select
             name="language"
             color="secondary"
-            value={formData.language}
-            onChange={handleChange}
+            value={language}
+            onChange={handleInputChange}
             required
           >
             {/* Add your language options here */}
@@ -119,16 +309,9 @@ const Blog = () => {
           <Select
           color="secondary"
             name="genre"
-            value={formData.genre}
-            onChange={handleGenreChange}
-            multiple
-            renderValue={(selected) => (
-              <div>
-                {selected.map((value) => (
-                  <Chip key={value} label={value} style={{ margin: 2 }} />
-                ))}
-              </div>
-            )}
+            value={genre}
+            onChange={handleInputChange}
+            required
           >
             {/* Add your genre options here */}
             <MenuItem value="Action">Action</MenuItem>
@@ -149,26 +332,17 @@ const Blog = () => {
           label="Actor Name"
           name="actorName"
           color="secondary"
-          value={formData.actorName}
-          onChange={handleChange}
+          value={actorName}
+          onChange={handleInputChange}
           fullWidth
           margin="normal"
           required
         />
-        {/* <TextField
-          label="Actress Name"
-          name="actressName"
-          value={formData.actressName}
-          onChange={handleChange}
-          fullWidth
-          margin="normal"
-          required
-        /> */}
         <TextField
           label="Director Name"
           name="directorName"
-          value={formData.directorName}
-          onChange={handleChange}
+          value={directorName}
+          onChange={handleInputChange}
           fullWidth
           color="secondary"
           margin="normal"
@@ -179,8 +353,8 @@ const Blog = () => {
           <Select
           color="secondary"
             name="contentRating"
-            value={formData.contentRating}
-            onChange={handleChange}
+            value={contentRating}
+            onChange={handleInputChange}
             required
           >
             <MenuItem value="U">U (Universal)</MenuItem>
@@ -194,8 +368,8 @@ const Blog = () => {
             label="Duration"
             name="duration"
             type="time"
-            value={formData.duration}
-            onChange={handleChange}
+            value={duration}
+            onChange={handleInputChange}
             fullWidth
             margin="normal"
             required
@@ -211,51 +385,96 @@ const Blog = () => {
             }}
           />
         </FormControl>
-        <TextField
-          label="Movie Poster"
-          name="moviePoster"
-          type="file"
-          onChange={handleImgChange}
-          fullWidth
-          color="secondary"
-          margin="normal"
-          InputLabelProps={{ shrink: true }}
-        />
-        {formData.moviePoster && (
-          <img
-            src={URL.createObjectURL(formData.moviePoster)}
-            alt="Movie Poster"
-            style={{ marginTop: '10px', maxWidth: '100%' }}
-          />
-        )}
-
-        <TextField
-          label="Upload your video"
-          name="videoFile"
-          type="file"
-          onChange={handleVideoChange}
-          fullWidth
-          color="secondary"
-          margin="normal"
-          InputLabelProps={{ shrink: true }}
-        />
-        {formData.videoFile && (
-          <Typography variant="body1" gutterBottom>
-            Selected Video: {formData.videoFile.name}
-          </Typography>
-        )}
+     
 
         <button
           type="submit"
           class="button-35"
           role="button"
+          onClick={handleSubmit}
+
         >
-          Submit
+          Continue
         </button>
       </form>
     </Container>
       </section>
       </ThemeProvider>
+
+      <ThemeProvider theme={theme}>
+      <Dialog className="your-modal-class" open={openModal}>
+      <DialogTitle className="dialog-title">Upload Your Content</DialogTitle>
+      <DialogContent className="dialog-content">
+        {activeStep === 1 && (
+          <div className="upload-section">
+            <label htmlFor="video-upload" className="video-upload">
+              Upload Video:
+            </label>
+            <input
+              type="file"
+              id="video-upload"
+              accept="video/*"
+              onChange={handleVideoUpload}
+              className="file-input"
+              required
+            />
+          </div>
+        )}
+        {activeStep === 2 && (
+          <div className="upload-section">
+            <label htmlFor="poster-upload">Upload Poster:</label>
+            <input
+              type="file"
+              id="poster-upload"
+              accept="image/*"
+              onChange={handleImageUpload}
+              required
+            />
+          </div>
+        )}
+        {activeStep === 3 && (
+          <div className="upload-section">
+            <label htmlFor="thumbnail-upload">Upload Thumbnail:</label>
+            <input
+              type="file"
+              id="thumbnail-upload"
+              accept="image/*"
+              onChange={handleImageUpload1}
+              required
+            />
+          </div>
+        )}
+
+        {activeStep < 3 && (
+          <Button onClick={handleNextStep} color="success">
+            Next
+          </Button>
+        )}
+
+        {activeStep === 3 && (
+          <>
+            {/* Display a progress bar based on fileUploadProgress */}
+            <LinearProgress
+              className="dialog-progress"
+              variant="determinate"
+              color="success"
+              value={fileUploadProgress}
+            />
+
+            <Button onClick={handleUpload} className="button-36">
+              Submit
+            </Button>
+          </>
+        )}
+
+        <Button onClick={handleCloseModal} color="success">
+          Cancel
+        </Button>
+      </DialogContent>
+    </Dialog>
+      </ThemeProvider>
+
+
     </>
   )
 }

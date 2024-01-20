@@ -302,7 +302,7 @@ export const team = [
 export const price = [
   {
     name: "BASIC PLAN",
-    price: "49K",
+    cover: "./images/silver2.png",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
