@@ -16,6 +16,22 @@
   color: 1F2833;
   margin: 40px 0;
 }
+
+.price .items h4{
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.items p{
+  text-align:justify;
+}
+.price .items{
+  border-bottom: 9px outset #66FCF1;
+  border-top: 9px inset #66FCF1;
+
+  border-radius: 40px;
+}
+
+
 /*--------------faq-------------*/
 .faq .container {
   max-width: 70%;

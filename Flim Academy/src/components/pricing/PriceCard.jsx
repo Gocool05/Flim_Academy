@@ -5,11 +5,10 @@ const PriceCard = () => {
   return (
     <>
       {price.map((val) => (
-        <div className='items shadow'>
+        <div className='items shadow' >
           <h4>{val.name}</h4>
-          <img src={val.cover} alt=''/>
           <p>{val.desc}</p>
-          <button className='outline-btn'>GET STARTED</button>
+          {/* <button className='outline-btn'>GET STARTED</button> */}
         </div>
       ))}
     </>

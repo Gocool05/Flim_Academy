@@ -1,6 +1,9 @@
 .testimonal .items {
   padding: 30px;
   transition: 0.5s;
+    border-bottom: 9px outset #66FCF1;
+    border-top: 9px inset #66FCF1;
+    border-radius: 40px;
 }
 
 .testimonal .img {
@@ -37,6 +40,9 @@
   background-color: #66FCF1;
   color: #1F2833;
   cursor: pointer;
+  border-bottom: 9px outset #C5C6C7;
+  border-top: 9px inset #C5C6C7;
+  border-radius: 40px;
 }
 .testimonal .items:hover span,
 .testimonal .items:hover p {

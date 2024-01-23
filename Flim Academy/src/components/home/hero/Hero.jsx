@@ -1,61 +1,72 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Heading from "../../common/heading/Heading";
 import "./Hero.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const Hero = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
-    <Slider {...settings}>
-      <div className="slide" >
-        <div className="overlay">
-          <div className="content">
-            <Heading subtitle="WELCOME TO Bright future" title="Best Education Expertise" />
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            <div className="buttons">
-              <button>GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i></button>
-              <button>VIEW COURSE <i className="fa fa-long-arrow-alt-right"></i></button>
+   <>
+   <div className="hero" >
+   <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+        >
+        <SwiperSlide>
+            <div className="slide-content">
+              <img src="https://res.cloudinary.com/dx78kzenz/image/upload/v1706011699/flimBG_nhjjeh.jpg" className="kenburns-bottom" alt="Slider Image 1" />
+              <div className="overlays">
+              <div className="overlays-content">
+                <h2 className="flicker-1">Bright Future</h2>
+                <p>At Bright Future Flim Tech Academy, We embrace the fervor of filmmaking, the essence of storytelling, and the delight of entertainment. </p>
+                <button className="button-37">Know us </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="slide" >
-        <div className="overlay">
-          <div className="content">
-            <Heading subtitle="Welcome to Another Section" title="Awesome Content" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div className="buttons">
-              <button>EXPLORE NOW <i className="fa fa-long-arrow-alt-right"></i></button>
-              <button>LEARN MORE <i className="fa fa-long-arrow-alt-right"></i></button>
+          </SwiperSlide>
+        <SwiperSlide>
+            <div className="slide-content">
+              <img src="https://res.cloudinary.com/dx78kzenz/image/upload/v1706010884/flimBG3_khnuqs.webp" className="kenburns-bottom" alt="Slider Image 1" />
+              <div className="overlays">
+              <div className="overlays-content">
+                <h2 className="flicker-1">Courses </h2>
+                <p>With an aim to arm another generation of young film-makers with a never-ending passion for good cinema</p>
+                <button className="button-37">Explore Now</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="slide" >
-        <div className="overlay">
-          <div className="content">
-            <Heading subtitle="Discover the Future" title="Cutting-edge Technology" />
-            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            <div className="buttons">
-              <button>START EXPLORING <i className="fa fa-long-arrow-alt-right"></i></button>
-              <button>FIND OUT MORE <i className="fa fa-long-arrow-alt-right"></i></button>
+          </SwiperSlide>
+        <SwiperSlide>
+            <div className="slide-content">
+              <img src="https://res.cloudinary.com/dx78kzenz/image/upload/v1706011696/flimBG5_rgxyjk.jpg" className="kenburns-bottom" alt="Slider Image 1" />
+              <div className="overlays">
+              <div className="overlays-content">
+                <h2 className="flicker-1">Apply for Contest</h2>
+                <p>Asia's Biggest Short flim Contest by bright future flim tech academy, Apply Now by clicking the Below button</p>
+                <button className="button-37">Apply Now</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </SwiperSlide>
+      </Swiper>
       </div>
-    </Slider>
+   </>
   );
 };
 

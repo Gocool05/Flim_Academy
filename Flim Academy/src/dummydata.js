@@ -72,6 +72,21 @@ export const coursesCard = [
   },
   {
     id: 3,
+    cover: "../images/courses/c5.png",
+    coursesName: "Script & Screenplay Writing",
+    courTeacher: [
+      {
+        dcover: "./images/back.webp",
+        name: "by Sunil Bishowkaram",
+        totalTime: "100 lectures (150 hrs)",
+      },
+    ],
+    priceAll: "$300 All Course",
+    pricePer: "$30 per month",
+  },
+
+  {
+    id: 4,
     cover: "../images/courses/c3.png",
     coursesName: "Film & Video Editing",
     courTeacher: [
@@ -85,7 +100,7 @@ export const coursesCard = [
     pricePer: "$5 per month",
   },
   {
-    id: 4,
+    id: 5,
     cover: "../images/courses/c4.png",
     coursesName: "VFX (Visual Effects)",
     courTeacher: [
@@ -98,24 +113,11 @@ export const coursesCard = [
     priceAll: "$30 All Course",
     pricePer: "$3 per month",
   },
-  {
-    id: 5,
-    cover: "../images/courses/c5.png",
-    coursesName: "Script & Screenplay Writing",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
-        totalTime: "100 lectures (150 hrs)",
-      },
-    ],
-    priceAll: "$300 All Course",
-    pricePer: "$30 per month",
-  },
+ 
   {
     id: 6,
     cover: "../images/courses/c6.png",
-    coursesName: "Audio & Sound Engineering",
+    coursesName: "Acting & Presentation",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -157,7 +159,7 @@ export const coursesCard = [
   {
     id: 9,
     cover: "../images/courses/c9.png",
-    coursesName: "Introducing to with HTML / CSS / JAVASCRIPT",
+    coursesName: "Pre- and post-production",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -171,7 +173,7 @@ export const coursesCard = [
   {
     id: 10,
     cover: "../images/courses/c9.png",
-    coursesName: "Acting & Presentation",
+    coursesName: "Audio & Sound Engineering",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -187,74 +189,74 @@ export const online = [
   {
     cover: "./images/courses/online/o1.png",
     hoverCover: "./images/courses/online/o1.1.png",
-    courseName: "UI/UX Design Courses",
-    course: "25 Courses",
+    courseName: "Screenwriter",
+    course: "25 Openings",
   },
   {
     cover: "./images/courses/online/o2.png",
     hoverCover: "./images/courses/online/o2.1.png",
-    courseName: "Art & Design",
-    course: "25 Courses",
+    courseName: "Film director",
+    course: "25 Openings",
   },
   {
     cover: "./images/courses/online/o3.png",
     hoverCover: "./images/courses/online/o3.1.png",
-    courseName: "Computer Science",
-    course: "10 Courses",
+    courseName: "Film producer",
+    course: "10 Openings",
   },
   {
     cover: "./images/courses/online/o4.png",
     hoverCover: "./images/courses/online/o4.1.png",
-    courseName: "History & Archeologic",
-    course: "15 Courses",
+    courseName: "Documentary maker",
+    course: "15 Openings",
   },
   {
     cover: "./images/courses/online/o5.png",
     hoverCover: "./images/courses/online/o5.1.png",
-    courseName: "Software Engineering",
-    course: "30 Courses",
+    courseName: "Publicist",
+    course: "30 Openings",
   },
   {
     cover: "./images/courses/online/o6.png",
     hoverCover: "./images/courses/online/o6.1.png",
-    courseName: "Information Software",
-    course: "60 Courses",
+    courseName: "Art director",
+    course: "60 Openings",
   },
   {
     cover: "./images/courses/online/o7.png",
     hoverCover: "./images/courses/online/o7.1.png",
-    courseName: "Health & Fitness",
-    course: "10 Courses",
+    courseName: "Video archivist",
+    course: "10 Openings",
   },
   {
     cover: "./images/courses/online/o8.png",
     hoverCover: "./images/courses/online/o8.1.png",
-    courseName: "Marketing",
-    course: "30 Courses",
+    courseName: "Casting agent",
+    course: "30 Openings",
   },
   {
     cover: "./images/courses/online/o9.png",
     hoverCover: "./images/courses/online/o9.1.png",
-    courseName: "Graphic Design",
-    course: "80 Courses",
+    courseName: "Journalist",
+    course: "80 Openings",
   },
   {
     cover: "./images/courses/online/o10.png",
     hoverCover: "./images/courses/online/o10.1.png",
-    courseName: "Music",
-    course: "120 Courses",
+    courseName: "Sound designer",
+    course: "12 Openings",
   },
   {
     cover: "./images/courses/online/o11.png",
     hoverCover: "./images/courses/online/o11.1.png",
-    courseName: "Business Administration",
-    course: "17 Courses",
+    courseName: "Event planner",
+    course: "17 Openings",
   },
   {
     cover: "./images/courses/online/o12.png",
     hoverCover: "./images/courses/online/o12.1.png",
-    courseName: "Web Management",
-    course: "17 Courses",
+    courseName: "Lighting designer",
+    course: "17 Openings",
   },
 ]
 export const team = [
@@ -301,24 +303,20 @@ export const team = [
 ]
 export const price = [
   {
-    name: "BASIC PLAN",
-    cover: "./images/silver2.png",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Filmmaking",
+    desc: "Immerse yourself in the filmmaking process and learn the whys that teach the how’s. Crafting compelling narratives goes beyond numbers, and this course guides you through the immersive art of filmmaking.",
   },
   {
-    name: "BEGINNER PLAN",
-    price: "79K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Cinematography",
+    desc: "Explore the art of cinematography where shots and images linger in the audience's memory long after the credits roll. This course delves into the visual language of film, enhancing your ability to capture cinematic moments.",
   },
   {
-    name: "PREMIUM PLAN",
-    price: "109k",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Editing",
+    desc: "Embark on a critical role in filmmaking with our editing course. Editors are key collaborators, shaping narratives, and creating seamless storytelling. Learn the art of editing and its pivotal role in the filmmaking process.",
   },
   {
-    name: "ULTIMATE PLAN",
-    price: "149K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Acting",
+    desc: "Dive into intensive screen acting training with our Academy's acting course. Modern on-camera acting techniques are at the forefront, preparing actors for dynamic performances and a successful journey in the film industry.",
   },
 ]
 export const faq = [
@@ -350,58 +348,52 @@ export const faq = [
 export const blog = [
   {
     id: 1,
-    type: "admin",
-    date: "JAN. 18, 2021",
-    com: "3 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b1.webp",
   },
   {
     id: 2,
-    type: "admin",
-    date: "API. 25, 2022",
-    com: "5 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b2.webp",
   },
-  {
-    id: 3,
-    type: "user",
-    date: "MAY. 15, 2022",
-    com: "10 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
-    cover: "../images/blog/b3.webp",
-  },
-  {
-    id: 4,
-    type: "admin",
-    date: "JAN. 02, 2022",
-    com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
-    cover: "../images/blog/b4.webp",
-  },
-  {
-    id: 5,
-    type: "admin",
-    date: "DEC. 14, 2022",
-    com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
-    cover: "../images/blog/b5.webp",
-  },
-  {
-    id: 6,
-    type: "user",
-    date: "JAN. 18, 2021",
-    com: "12 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
-    cover: "../images/blog/b6.webp",
-  },
+  // {
+  //   id: 3,
+  //   type: "user",
+  //   date: "MAY. 15, 2022",
+  //   com: "10 COMMENTS ",
+  //   title: "Build your Dream Software & Engineering Career",
+  //   desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+  //   cover: "../images/blog/b3.webp",
+  // },
+  // {
+  //   id: 4,
+  //   type: "admin",
+  //   date: "JAN. 02, 2022",
+  //   com: "3 COMMENTS ",
+  //   title: "Build your Dream Software & Engineering Career",
+  //   desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+  //   cover: "../images/blog/b4.webp",
+  // },
+  // {
+  //   id: 5,
+  //   type: "admin",
+  //   date: "DEC. 14, 2022",
+  //   com: "3 COMMENTS ",
+  //   title: "Build your Dream Software & Engineering Career",
+  //   desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+  //   cover: "../images/blog/b5.webp",
+  // },
+  // {
+  //   id: 6,
+  //   type: "user",
+  //   date: "JAN. 18, 2021",
+  //   com: "12 COMMENTS ",
+  //   title: "Build your Dream Software & Engineering Career",
+  //   desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+  //   cover: "../images/blog/b6.webp",
+  // },
 ]
 export const testimonal = [
   {

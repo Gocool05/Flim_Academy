@@ -1,5 +1,8 @@
 .coursesCard {
-  padding: 50px 0;
+  padding: 50px 10px;
+  border-bottom: 9px outset #66FCF1;
+  border-top: 9px inset #66FCF1;
+  border-radius: 30px;
 }
 .coursesCard .items {
   background-color: #C5C6C7;
@@ -89,11 +92,11 @@
   line-height: 30px;
 }
 .online span {
-  background-color: #f8f8f8;
+  background-color: #1F2833;
   padding: 5px 20px;
   font-weight: 500;
   font-size: 15px;
-  color: #45A29E;
+  color: #C5C6C7;
   border-radius: 5px;
 }
 .online .box .show {
@@ -108,8 +111,10 @@
   opacity: 1;
   position: absolute;
   top: 0;
+  filter:brightness(0.1);
   left: 0;
 }
+
 .online .box:hover h1 {
   color:#1F2833;
 }

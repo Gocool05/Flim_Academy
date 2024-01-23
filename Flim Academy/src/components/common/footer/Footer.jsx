@@ -88,7 +88,7 @@ const Footer = () => {
       </footer>
       <div className='legal'>
         <p>
-          Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
+          Copyright ©2024 And All rights reserved by <a  style={{color: "#66FCF1"}} href='https://www.jgntechnologies.com/'>JGN Technologies</a>
         </p>
       </div>
     </>
