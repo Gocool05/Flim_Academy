@@ -7,10 +7,12 @@ const CourseHome = () => {
   return (
     <>
       <Back title='Explore Courses' />
+      <div style={{ height: "50px" }}></div>
       <CoursesCard />
       <OnlineCourses />
       <br/>
       <br/>
+      <div style={{ height: "50px" }}></div>
     </>
   )
 }

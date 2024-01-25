@@ -22,7 +22,7 @@ const Footer = () => {
           <div className='box logo'>
             <h1>Bright Future</h1>
             <span>Flim Tech Academy</span>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p style={{ textAlign: "left", fontSize: "14px" }}>Bright Future Film Tech Academy (BFFTA) is a distinguished film institute situated in Chennai, dedicated to imparting comprehensive training in the art and skills of Screenplay Writing-Direction, Cinematography, and Film Editing</p>
 
             <i className='fab fa-facebook-f icon'></i>
             <i className='fab fa-twitter icon'></i>

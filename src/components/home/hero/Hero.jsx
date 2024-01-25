@@ -14,7 +14,7 @@ const Hero = () => {
   return (
    <>
    <div className="hero" >
-   <Swiper
+   <Swiper 
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{

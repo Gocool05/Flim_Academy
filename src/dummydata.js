@@ -2,20 +2,20 @@ export const homeAbout = [
   {
     id: 1,
     cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
-    title: "Online Courses",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Flimming Courses",
+    desc: "Bright Future Film Tech Academy (BFFTA) is a distinguished film institute situated in Chennai, dedicated to imparting comprehensive training in the art and skills of Screenplay Writing-Direction, Cinematography, and Film Editing.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/diploma.png",
-    title: "Earn A Certificates",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Join Our Community",
+    desc: "Join Bright Future Film Tech Academy and embark on a journey towards a rewarding career in the film industry. We are here to shape your dreams into reality, offering a platform where creativity meets technology, and where each student is empowered to contribute to the ever-evolving landscape of cinema.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/athlete.png",
     title: "Learn with Expert",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Bright Future Film Tech Academy (BFFTA) ensures an immersive learning experience with industry experts, offering hands-on training, cutting-edge insights, and personalized guidance for aspiring filmmakers.",
   },
 ]
 export const awrapper = [
@@ -398,23 +398,23 @@ export const blog = [
 export const testimonal = [
   {
     id: 1,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "GOKUL SANKAR",
+    post: "Student at Bright Future Film Tech Academy",
+    desc: "Since childhood I had a passion for Cinema, especially Indian Cinema. When I got an opportunity to learn Film Making & Direction at Bright Future Film Tech Academy I was thrilled as I got an opportunity to shoot at Filmcity with the entire crew. The faculty here is highly qualified and experienced. ",
     cover: "./images/testo/t1.webp",
   },
   {
     id: 2,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "AJAY KUMAR",
+    post: "Student at Bright Future Film Tech Academy",
+    desc: "The most economical film and television academy which provides 100% practical hands on training with highly qualified and experienced faculties is Bright Future Film Tech Academy. I chose BFFTA after a lot of research and I am happy to state that I got the best training at the best place.",
     cover: "./images/testo/t2.webp",
   },
   {
     id: 3,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "VINOTH KUMAR",
+    post: "Student at Bright Future Film Tech Academy",
+    desc: "My name is Vinoth Kumar and I am from Chennai.The faculty at Bright Future Film Tech Academy is very good as I could get all the desired knowledge in Music Production.The environment here is fully charged & energetic. I was staying at the MFA Hostel and it was just like Family. I recommend Mumbai Film Academy for all those who have a Dream and want to pursue their career in Bollywood.",
     cover: "./images/testo/t3.webp",
   },
 ]

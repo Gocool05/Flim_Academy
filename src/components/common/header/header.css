@@ -19,7 +19,7 @@ header {
   border-top: 5px inset #66FCF1;
   border-radius: 40px;
   margin: 0 30px;
-  margin-bottom: 30px;
+  
 }
 header .nav {
   display: flex !important;
@@ -41,9 +41,37 @@ header ul li a:hover {
 }
 .start {
   background-color: #66FCF1;
-  padding: 30px 70px;
   color: #0B0C10;
-  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  animation: start 2s ease 0s infinite normal none;
+}
+
+@keyframes start {
+  0% {
+	transform: scale(1);
+  }
+
+  50% {
+	transform: scale(1.1);
+  }
+
+  100% {
+	transform: scale(1);
+  }
+}
+
+
+
+
+.button2{
+  background-color: #66FCF1;
+
+}
+.Start1{
+ margin-top: 20px;
+ margin-right: 20px;
 }
 .toggle {
   display: none;
@@ -63,8 +91,9 @@ header ul li a:hover {
   }
   header {
     margin: 0;
-    background-color: #45A29E;
+    /* background-color: #45A29E; */
     position: relative;
+    z-index: 9999999;
   }
   header ul.flexSB {
     display: none;
@@ -79,7 +108,7 @@ header ul li a:hover {
     font-size: 30px;
     position: absolute;
     right: 0;
-    top:-20px;
+    top:-33px;
   }
   .mobile-nav {
     position: absolute;
@@ -88,4 +117,9 @@ header ul li a:hover {
     width: 100%;
     background-color: #0B0C10;
   }
+
+  .Start1{
+    margin: 10px;
+   }
+
 }

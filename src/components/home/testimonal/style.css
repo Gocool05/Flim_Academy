@@ -43,6 +43,7 @@
   border-bottom: 9px outset #C5C6C7;
   border-top: 9px inset #C5C6C7;
   border-radius: 40px;
+  font-weight: bold;
 }
 .testimonal .items:hover span,
 .testimonal .items:hover p {

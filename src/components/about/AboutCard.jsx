@@ -21,7 +21,7 @@ const AboutCard = () => {
                     <div className='img'>
                       <img src={val.cover} alt='' />
                     </div>
-                    <div className='text'>
+                    <div className='text' style={{ marginLeft: "20px" }}>
                       <h2>{val.title}</h2>
                       <p>{val.desc}</p>
                     </div>

@@ -152,8 +152,8 @@
     height: 40vh;
   }
   .hero {
-    background-position: right;
-    padding-top: 20%;
+    background-position: center;
+    /* padding-top: 20%; */
 
   }
   .hero .row {
@@ -168,7 +168,9 @@
       height: 100%;
       object-fit: cover;
     }
-
+    .mySwiper{
+      height: 80vh;
+    }
     .overlays {
       position: absolute;
       top: 50%;
@@ -188,7 +190,7 @@
     }
     
     .overlays h2 {
-      font-size: 1rem;
+      font-size: 2rem;
       margin-bottom: 10px;
       color: #66FCF1;
       text-transform: uppercase;
@@ -196,7 +198,7 @@
     }
     
     .overlays p {
-      font-size: 12px;
+      font-size: 20px;
       margin-bottom: 20px;
       line-height: 1.2;
     }

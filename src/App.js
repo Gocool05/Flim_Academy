@@ -8,20 +8,13 @@ import Blog from "./components/blog/Blog"
 import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
+import Admission from "./components/Admission/Admission"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Gallery from "./components/Gallery/Gallery"
 
 function App() {
   return (
     <>
-    {/* <Routes>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/about' element={<About />} />
-      <Route exact path='/courses' element={<CourseHome />} />
-      <Route exact path='/team' element={<Team />} />
-      <Route exact path='/pricing' element={<Pricing />} />
-      <Route exact path='/journal' element={<Blog />} />
-      <Route exact path='/contact' element={<Contact />} />
-    </Routes> */}
       <Router>
         <Header />
         <Switch>
@@ -32,6 +25,8 @@ function App() {
           <Route exact path='/faq' component={Pricing} />
           <Route exact path='/contest' component={Blog} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/Admission' component={Admission} />
+          <Route exact path='/Gallery' component={Gallery} />
         </Switch>
         <Footer />
       </Router>

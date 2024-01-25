@@ -27,10 +27,16 @@
 .price .items{
   border-bottom: 9px outset #66FCF1;
   border-top: 9px inset #66FCF1;
-
   border-radius: 40px;
 }
-
+.price .items:hover{
+  border-bottom: 9px outset #C5C6C7;
+  border-top: 9px inset #C5C6C7;
+  border-radius: 40px;
+  background-color: #66FCF1;
+  font-weight: bold;
+  color: #1F2833;
+}
 
 /*--------------faq-------------*/
 .faq .container {

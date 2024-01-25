@@ -40,12 +40,14 @@
 }
 .aboutHome .item:hover {
   background-color: #45A29E;
-  color: #C5C6C7;
+  color: #0B0C10;
   cursor: pointer;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  font-weight: bold;
 }
 .aboutHome .item:hover p {
-  color: #C5C6C7;
+  color: #0B0C10;
+
 }
 /*----------awrapper------------*/
 .awrapper {

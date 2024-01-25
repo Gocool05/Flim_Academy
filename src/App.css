@@ -102,7 +102,8 @@ p {
 }
 
 .back {
-  background-image: url("../public/images/about12.jpg");
+  background-image: url("../public/images/bg2.jpg");
+  /* background-image: url("https://res.cloudinary.com/dx78kzenz/image/upload/v1706088850/background1_xjowdr.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   position: absolute;
