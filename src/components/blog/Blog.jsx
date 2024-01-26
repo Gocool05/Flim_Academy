@@ -156,6 +156,12 @@ const Blog = () => {
 
   const handleUpload = async () => {
     const formData = new FormData();
+
+    const newFileData = {
+      alternativeText: localStorage.getItem("formId"),
+    };
+    formData.append('fileInfo', JSON.stringify(newFileData));
+    
     formData.append('files', videoUpload);
     formData.append('refId',localStorage.getItem("formId"))
       formData.append('ref','api::form.form')
