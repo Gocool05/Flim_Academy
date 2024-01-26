@@ -111,21 +111,21 @@ const Blog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
-      userName &&
-      email &&
-      mobile &&
-      movieName &&
-      description &&
-      language &&
-      genre &&
-      actorName &&
-      directorName &&
-      contentRating &&
+      // userName &&
+      // email &&
+      // mobile &&
+      // movieName &&
+      // description &&
+      // language &&
+      // genre &&
+      // actorName &&
+      // directorName &&
+      // contentRating &&
       duration
     ) {
       setOpenModal(true);
     try {
-      const response = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/forms', {
+      const response = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/forms', {
     data:{
       userName: userName,
       mobileNumber: mobile,
@@ -163,7 +163,7 @@ const Blog = () => {
   
     // Handle video upload
     try {
-      const videoResponse = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/upload', formData, {
+      const videoResponse = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -195,7 +195,7 @@ const Blog = () => {
       }
       // Handle image upload
       try {
-        const imageResponse = await axios.post('https://1571-2401-4900-1cd4-55eb-7d91-98d6-f34-7d32.ngrok-free.app/api/upload', imageFormData, {
+        const imageResponse = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/upload', imageFormData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -401,77 +401,98 @@ const Blog = () => {
       </section>
       </ThemeProvider>
 
-      <ThemeProvider theme={theme}>
-      <Dialog className="your-modal-class" open={openModal}>
-      <DialogTitle className="dialog-title">Upload Your Content</DialogTitle>
-      <DialogContent className="dialog-content">
-        {activeStep === 1 && (
-          <div className="upload-section">
-            <label htmlFor="video-upload" className="video-upload">
-              Upload Video:
-            </label>
-            <input
-              type="file"
-              id="video-upload"
-              accept="video/*"
-              onChange={handleVideoUpload}
-              className="file-input"
-              required
-            />
-          </div>
-        )}
-        {activeStep === 2 && (
-          <div className="upload-section">
-            <label htmlFor="poster-upload">Upload Poster:</label>
-            <input
-              type="file"
-              id="poster-upload"
-              accept="image/*"
-              onChange={handleImageUpload}
-              required
-            />
-          </div>
-        )}
-        {activeStep === 3 && (
-          <div className="upload-section">
-            <label htmlFor="thumbnail-upload">Upload Thumbnail:</label>
-            <input
-              type="file"
-              id="thumbnail-upload"
-              accept="image/*"
-              onChange={handleImageUpload1}
-              required
-            />
-          </div>
-        )}
+       <ThemeProvider theme={theme}>
+        <Dialog className="your-modal-class" open={openModal}>
+          <DialogTitle className="dialog-title">Upload Your Content</DialogTitle>
+          <DialogContent className="dialog-content">
+            {activeStep === 1 && (
+              <div className="upload-section">
+                <label htmlFor="video-upload" className="video-upload">
+                  Upload Video:
+                </label>
+                <input
+                  type="file"
+                  id="video-upload"
+                  accept="video/*"
+                  onChange={handleVideoUpload}
+                  className="file-input"
+                  required
+                />
+                {/* Progress bar for video upload */}
+                <LinearProgress
+                  className="dialog-progress"
+                  variant="determinate"
+                  color="success"
+                  value={fileUploadProgress}
+                />
+              </div>
+            )}
+            {activeStep === 2 && (
+              <div className="upload-section">
+                <label htmlFor="poster-upload">Upload Poster:</label>
+                <input
+                  type="file"
+                  id="poster-upload"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  required
+                />
+                {/* Progress bar for poster upload */}
+                <LinearProgress
+                  className="dialog-progress"
+                  variant="determinate"
+                  color="success"
+                  value={fileUploadProgress}
+                />
+              </div>
+            )}
+            {activeStep === 3 && (
+              <div className="upload-section">
+                <label htmlFor="thumbnail-upload">Upload Thumbnail:</label>
+                <input
+                  type="file"
+                  id="thumbnail-upload"
+                  accept="image/*"
+                  onChange={handleImageUpload1}
+                  required
+                />
+                {/* Progress bar for thumbnail upload */}
+                <LinearProgress
+                  className="dialog-progress"
+                  variant="determinate"
+                  color="success"
+                  value={fileUploadProgress}
+                />
+              </div>
+            )}
 
-        {activeStep < 3 && (
-          <Button onClick={handleNextStep} color="success">
-            Next
-          </Button>
-        )}
+            {activeStep < 3 && (
+              <Button onClick={handleNextStep} color="success">
+                Next
+              </Button>
+            )}
 
-        {activeStep === 3 && (
-          <>
-            {/* Display a progress bar based on fileUploadProgress */}
-            <LinearProgress
-              className="dialog-progress"
-              variant="determinate"
-              color="success"
-              value={fileUploadProgress}
-            />
+            {activeStep === 3 && (
+              <>
+                {/* Display a progress bar based on fileUploadProgress */}
+                <LinearProgress
+                  className="dialog-progress"
+                  variant="determinate"
+                  color="success"
+                  value={fileUploadProgress}
+                />
 
-            <Button onClick={handleUpload} className="button-36">
-              Submit
+                <Button onClick={handleUpload} className="button-36">
+                  Submit
+                </Button>
+              </>
+            )}
+
+            <Button onClick={handleCloseModal} color="success">
+              Cancel
             </Button>
-          </>
-        )}
-
-        <Button onClick={handleCloseModal} color="success">
-          Cancel
-        </Button>
-      </DialogContent>
-    </Dialog>
+          </DialogContent>
+        </Dialog>
       </ThemeProvider>
 
 
