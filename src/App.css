@@ -266,4 +266,10 @@ p {
     color: #C5C6C7;
     text-transform: uppercase;
   }
+
+  #heading h1 {
+    font-size: 35px;
+  }
+
+
 }

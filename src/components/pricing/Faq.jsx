@@ -14,7 +14,7 @@ const Faq = () => {
 
   return (
     <>
-      <Heading subtitle='FAQS' title='Frequesntly Ask Question' />
+      <Heading subtitle='FAQS' title='Frequesntly Asked Question' />
       <section className='faq' style={{ marginBottom: "4rem" }}>
         <div className='container'>
           {faq.map((val, index) => (

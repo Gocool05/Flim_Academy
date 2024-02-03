@@ -289,7 +289,7 @@ const CoursesCard = () => {
       <TextField label="Last Name" name="lastname" value={formData.lastname} onChange={handleInputChange}  fullWidth required />
     </div>
       <TextField label="Mobile Number" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange}  fullWidth required />
-      <TextField label="Email Id" name="email" value={formData.emailid} onChange={handleInputChange}  fullWidth required />
+      <TextField label="Email Id" name="email" type="email" value={formData.emailid} onChange={handleInputChange}  fullWidth required />
 
     {/* Row 2 */}
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
