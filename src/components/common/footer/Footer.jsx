@@ -67,20 +67,23 @@ const Footer = () => {
             <ul>
               <li>
                 <i className='fa fa-map'></i>
-                203 Fake St. Mountain View, San Francisco, California, USA
+                F1, 2nd Floor, Land Marvel Residential Flat Owners Association, Ashok Nagar, Chennai-600 083.</li>
+              <li>
+                <i className='fa fa-phone-alt'></i>
+                +91 93422 54626
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
-                +2 392 3929 210
+                +91 044-35773187
               </li>
               <li>
                 <i className='fa fa-paper-plane'></i>
-                info@yourdomain.com
+                brightfuturefilmtechacademy@gmail.com
               </li>
               <li>
                 <i className='fa fa-clock'></i>
-                Mon. - Fri. (10am-5pm) <br/>
-                Sat. & Sun. (11am-5pm)
+                Mon - Fri. (10am-5pm) <br/>
+                Sat & Sun. (11am-5pm)
               </li>
             </ul>
           </div>
