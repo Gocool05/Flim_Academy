@@ -125,10 +125,9 @@
 }
 /*-------------online---------*/
 @media screen and (max-width: 768px) {
-  /* .coursesCard .items{
-    height: max-content;
-    width:330px;
-  } */
+  .coursesCard .items{
+  padding: 30px 10px;
+  }
   .coursesCard .text h1{
     font-size: 25px;
   }
