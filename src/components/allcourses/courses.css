@@ -119,6 +119,10 @@
 .online .box:hover h1 {
   color:#1F2833;
 }
+
+.form{
+  width: 500px;
+}
 /*-------------online---------*/
 @media screen and (max-width: 768px) {
   /* .coursesCard .items{
@@ -128,4 +132,8 @@
   .coursesCard .text h1{
     font-size: 25px;
   }
+  .form{
+    width: 100%;
+  }
+
 }

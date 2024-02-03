@@ -93,7 +93,9 @@
   .aboutHome .item{
     width:100% ;
   }
-
+  .AboutSpace{
+    margin-bottom: 100%;
+  }
   .awrapper {
     height: 50vh;
   }

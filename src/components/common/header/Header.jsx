@@ -44,6 +44,9 @@ const Header = () => {
             <li>
               <Link to='/contact'>Contact</Link>
             </li>
+            {/* <li>
+              <Link to='/Admin'>Admin</Link>
+            </li> */}
           </ul>
           <div className="Start1" >
             {/* <div className='button' onClick={handleClick} >Contest</div>

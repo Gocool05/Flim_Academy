@@ -11,13 +11,17 @@ import Home from "./components/home/Home"
 import Admission from "./components/Admission/Admission"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Gallery from "./components/Gallery/Gallery"
+import EnrollmentModal from "./components/common/EnrollNow/Enroll"
+import { ModalProvider } from "./ModalContext"
 
 function App() {
   return (
     <>
+      
       <Router>
         <Header />
         <Switch>
+        <ModalProvider>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
           <Route exact path='/courses' component={CourseHome} />
@@ -27,9 +31,12 @@ function App() {
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/Admission' component={Admission} />
           <Route exact path='/Gallery' component={Gallery} />
+          <Route exact path='/Enroll' component={EnrollmentModal} />
+          </ModalProvider>
         </Switch>
         <Footer />
       </Router>
+      
     </>
   )
 }

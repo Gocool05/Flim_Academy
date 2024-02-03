@@ -126,7 +126,7 @@ const Gallery = () => {
 
   return (
     <>
-    <Back title='Showcasing BFFTA' />
+    <Back title='BFFTA Moments' />
     <section className="gallery">
     <div class="container">  
     <div id="gallery" >

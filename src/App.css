@@ -120,9 +120,79 @@ p {
   color: #66FCF1;
   text-align: center;
 }
+
+
+
+
+@keyframes swing{
+  0%{
+     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%);
+    clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  }
+  50%{
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+
+  }
+  100%{
+     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
+
+
+@keyframes lights {
+  0% {
+    color: #66FCF1;
+    text-shadow:
+      0 0 1em hsla(187, 100%, 50%, 0.2),
+      0 0 0.125em hsla(184, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: #66FCF1;
+    text-shadow:
+      0 0 1em hsla(182, 100%, 50%, 0.5),
+      0 0 0.125em hsla(180, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: #66FCF1;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 0%, 0.5),
+      0 0 0.125em hsla(187, 100%, 50%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: #66FCF1;
+    text-shadow:
+      0 0 1em hsla(189, 100%, 50%, 0.5),
+      0 0 0.125em hsla(0, 0%, 0%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: #66FCF1;
+    text-shadow:
+      0 0 1em hsla(182, 100%, 50%, 0.2),
+      0 0 0.125em hsla(0, 0%, 0%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+}
+
+
 .back h1 {
   font-size: 6vw;
-  font-weight: 400;
+  font-weight: 900;
+  animation: lights 5s 750ms linear infinite;
 }
 .back h2 {
   font-weight: 500;

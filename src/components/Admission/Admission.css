@@ -1,8 +1,10 @@
 .admission-heading{
     text-transform: uppercase;
-    text-align: center;
-    padding:20px ;
-    color: #45A29E;
-    background-color: black;
-    
+    padding: 20px,0px;
+    color: #0B0C10;
 }
+.Admission-paper li{
+    font-weight: 500;
+    font-size: 18px;
+}
+

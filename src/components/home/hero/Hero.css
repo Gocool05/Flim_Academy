@@ -73,6 +73,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  box-shadow:#C5C6C7 0 0 0 3px, transparent 0 0 0 0;
   }
   
   .button-37:hover {

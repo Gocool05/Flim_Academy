@@ -8,6 +8,7 @@ const Head = () => {
           <div className='logo'>
             <h1>Bright Future</h1>
             <span>Flim Tech Academy</span>
+            {/* <img src='https://res.cloudinary.com/dx78kzenz/image/upload/v1706786022/BrightFuture_Logo_kcm7oo.jpg' alt='' /> */}
           </div>
 
           <div className='social'>

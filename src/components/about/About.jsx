@@ -10,6 +10,7 @@ const About = () => {
     <>
       <Back title='About Us' />
       <AboutCard />
+      <div className="AboutSpace"></div>
       <Hprice/>
     </>
   )

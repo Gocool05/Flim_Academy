@@ -29,12 +29,12 @@ const Admission = () => {
     <div className='container'>
     <Container style={{ marginTop: 20, marginBottom: 40 }}>
       <Typography variant="h3" style={{ color: '#66FCF1', textAlign: 'center' }} gutterBottom>
-        ADMISSION
+        ADMISSION PROCEDURE
       </Typography>
       
       {/* Admission Details */}
       <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginTop: 20, marginBottom: 20, background: '#C5C6C7', color: '#1F2833' }}>
-        <Typography  gutterBottom className='admission-heading'>
+        <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
           Admission Details
         </Typography>
         <ul>
@@ -48,50 +48,50 @@ const Admission = () => {
       </Paper>
 
       {/* Admission Form */}
-      <Paper elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
-        <Typography  gutterBottom className='admission-heading'>
+      <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
+        <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
           What do you need for your Admission
         </Typography>
         <ul>
-          <li>Community Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Community Certificate</li>
           <br/>
-          <li>SSLC Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>SSLC Certificate</li>
           <br/>
-          <li>HSC Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>HSC Certificate</li>
           <br/>
-          <li>Degree / Diploma Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Degree / Diploma Certificate</li>
           <br/>
-          <li>Migration Certificate( other state students only)</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Migration Certificate( other state students only)</li>
           <br/>
-          <li>Transfer Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Transfer Certificate</li>
           <br/>
-          <li>Two references</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Two references</li>
           <br/>
-          <li>Passport-size photographs</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Passport-size photographs</li>
           <br/>
-          <li>Photocopy of Address Proof</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Photocopy of Address Proof</li>
           <br/>
         </ul>
       </Paper>
-      <Paper elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
-        <Typography  gutterBottom className='admission-heading'>
+      <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
+        <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
         ELIGIBILITY
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom >
         Applicants should normally have at least one of the following
         </Typography>
         <ul>
-          <li>Minimum SSLC / HSC pass or</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Minimum SSLC / HSC pass or</li>
           <br/>
-          <li>A Bachelor’s degree or</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>A Bachelor’s degree or</li>
           <br/>
-          <li>HSC Certificate</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>HSC Certificate</li>
           <br/>
-          <li>An equivalent (international) or higher qualification or</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>An equivalent (international) or higher qualification or</li>
           <br/>
-          <li>An equivalent professional qualification or</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>An equivalent professional qualification or</li>
           <br/>
-          <li>Substantial professional experience in film or a related area.</li>
+          <li><i class="fas fa-film" style={{color: '#45A29E', marginRight: 10}}></i>Substantial professional experience in film or a related area.</li>
           <br/>
           <br/>
           <li>You are welcome to apply even if you haven't made films, but feel you have the ability to and meet our minimum entry requirements.</li>
@@ -102,7 +102,7 @@ const Admission = () => {
         </ul>
       </Paper>
       <Paper elevation={3} style={{ padding: 20, marginTop: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
-        <Typography  gutterBottom className='admission-heading'>
+        <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
         MEDIUM
         </Typography>
         <Typography variant="h6" gutterBottom>
@@ -110,7 +110,7 @@ const Admission = () => {
         </Typography>
       </Paper>
       <Paper elevation={3} style={{ padding: 20, marginTop: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
-        <Typography  gutterBottom className='admission-heading'>
+        <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
         ATTENDANCE
         </Typography>
         <Typography variant="h6" gutterBottom>
@@ -175,7 +175,7 @@ const Admission = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <button className='button-37'>Enquire now</button>
+      <a href="https://wa.me/+918870548872"><button className='button-37' style={{width:'100%', marginTop: 20}}>Enquire now</button></a>
     </Container>
       </div>
     </>

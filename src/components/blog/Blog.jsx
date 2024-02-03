@@ -125,7 +125,7 @@ const Blog = () => {
     ) {
       setOpenModal(true);
     try {
-      const response = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/forms', {
+      const response = await axios.post('http://localhost:1337/api/forms', {
     data:{
       userName: userName,
       mobileNumber: mobile,
@@ -159,17 +159,23 @@ const Blog = () => {
 
     const newFileData = {
       alternativeText: localStorage.getItem("formId"),
+      caption: 'video',
+    };
+
+    const captionVideo = {
+      caption: 'video',
     };
     formData.append('fileInfo', JSON.stringify(newFileData));
-    
+    // formData.append('file', JSON.stringify(captionVideo));
     formData.append('files', videoUpload);
     formData.append('refId',localStorage.getItem("formId"))
-      formData.append('ref','api::form.form')
-      formData.append('field',"VideoFile")
+    formData.append('ref','api::form.form')
+    formData.append('field',"VideoFile")
+
   
     // Handle video upload
     try {
-      const videoResponse = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/upload', formData, {
+      const videoResponse = await axios.post('http://localhost:1337/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -193,15 +199,27 @@ const Blog = () => {
       imageFormData.append('files', imageFormDatas[i]);
       imageFormData.append('refId',localStorage.getItem("formId"))
       imageFormData.append('ref','api::form.form')
+
+      
       if(i==0){
         imageFormData.append('field',"MoviePoster")
+        const newFileData = {
+          alternativeText: localStorage.getItem("formId"),
+          caption: 'MoviePoster',
+        };
+        imageFormData.append('fileInfo', JSON.stringify(newFileData));
       }
       else{
         imageFormData.append('field',"MovieThumbnail")
+        const newFileData = {
+          alternativeText: localStorage.getItem("formId"),
+          caption: 'Thumbnail',
+        };
+        imageFormData.append('fileInfo', JSON.stringify(newFileData));
       }
       // Handle image upload
       try {
-        const imageResponse = await axios.post('https://28ac-2401-4900-1cd4-1cd6-bd1e-e2b2-f3e-8c1e.ngrok-free.app/api/upload', imageFormData, {
+        const imageResponse = await axios.post('http://localhost:1337/api/upload', imageFormData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -463,12 +481,12 @@ const Blog = () => {
                   required
                 />
                 {/* Progress bar for thumbnail upload */}
-                <LinearProgress
+                {/* <LinearProgress
                   className="dialog-progress"
                   variant="determinate"
                   color="success"
                   value={fileUploadProgress}
-                />
+                /> */}
               </div>
             )}
 
