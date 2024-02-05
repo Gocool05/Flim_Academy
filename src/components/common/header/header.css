@@ -1,13 +1,17 @@
 /*--------head------------*/
 .head {
-  padding: 20px 0;
+ 
   color: #C5C6C7;
 }
-.logo h1 {
+.logo img{
+ height: 100px;
+ width: auto;
+}
+/* .logo h1 {
   font-size: 35px;
   font-weight: 900;
   color: #66FCF1;
-}
+} */
 .head .icon {
   margin-left: 10px;
   color:#66FCF1;
@@ -15,8 +19,6 @@
 /*--------head------------*/
 /*--------header------------*/
 header {
-  border-bottom: 5px outset #66FCF1;
-  border-top: 5px inset #66FCF1;
   border-radius: 40px;
   margin: 0 30px;
   
@@ -27,6 +29,7 @@ header .nav {
 }
 header li {
   margin-right: 40px;
+  margin-top: 20px;
 }
 header ul {
   padding: 30px 20px;
@@ -35,9 +38,40 @@ header ul li a {
   color: #C5C6C7;
   font-weight: 500;
   transition: 0.5s;
+  margin-top: 20px;
+
 }
 header ul li a:hover {
+  animation: anim2 500ms cubic-bezier(0.175, 0.885, 0.32, 0.275) infinite;
   color: #66FCF1;
+  font-weight: 900;
+}
+
+
+@keyframes anim2 {
+  0% {
+    opacity: 1;
+    transform: translateY(px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.Startlist{
+  margin-top: 8px;
 }
 .start {
   background-color: #66FCF1;
@@ -46,6 +80,19 @@ header ul li a:hover {
   font-weight: bold;
   cursor: pointer;
   animation: start 2s ease 0s infinite normal none;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+}
+
+.socialicon{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
 }
 
 @keyframes start {
@@ -70,8 +117,7 @@ header ul li a:hover {
 
 }
 .Start1{
- margin-top: 20px;
- margin-right: 20px;
+
 }
 .toggle {
   display: none;
@@ -108,7 +154,6 @@ header ul li a:hover {
     font-size: 30px;
     position: absolute;
     right: 0;
-    top:-33px;
   }
   .mobile-nav {
     position: absolute;
@@ -118,8 +163,8 @@ header ul li a:hover {
     background-color: #0B0C10;
   }
 
-  .Start1{
-    margin: 10px;
+   .socialicon i{
+    margin-bottom: 8px;
    }
-
+ 
 }

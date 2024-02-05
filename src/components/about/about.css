@@ -10,8 +10,13 @@
   height: 120vh;
   float: inline-end;
   margin-right:20% ;
+  filter: drop-shadow(5px 5px 100px #45A29E);
 }
 .aboutHome .right {
+  padding: 80px 50px;
+  padding-top: 150px;
+}
+.aboutHome .left {
   padding: 80px 50px;
   padding-top: 150px;
 }
@@ -89,6 +94,10 @@
     width: auto;
     margin-left: 0;
     height: 50vh;
+  }
+  .aboutHome .left{
+    padding: 0px;
+  padding-top: 0px;
   }
   .aboutHome .item{
     width:100% ;

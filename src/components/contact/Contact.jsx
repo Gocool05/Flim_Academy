@@ -19,15 +19,16 @@ const Contact = () => {
             <div className='items grid2'>
               <div className='box'>
                 <h4>ADDRESS:</h4>
-                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <p>F1, 2nd FloorLand Marvel Residential Flat Owners Association, Ashok Nagar, Chennai-600 083.</p>
               </div>
               <div className='box'>
                 <h4>EMAIL:</h4>
-                <p> info@yoursite.com</p>
+                <p> brightfuturefilmtechacademy@ gmail.com</p>
               </div>
               <div className='box'>
                 <h4>PHONE:</h4>
-                <p> + 1235 2355 98</p>
+                <p>+91 93422 54626</p>
+                <p>+91 044-35773187</p>
               </div>
             </div>
 
@@ -44,7 +45,12 @@ const Contact = () => {
             </form>
 
             <h3>Follow us here</h3>
-            <span>FACEBOOK TWITTER INSTAGRAM DRIBBBLE</span>
+            <span >
+            <i style={{marginRight:"10px"}} className='fab fa-facebook-f icon'></i>
+            <i style={{marginRight:"10px"}}className='fab fa-instagram icon'></i>
+            <i style={{marginRight:"10px"}} className='fab fa-twitter icon'></i>
+            <i style={{marginRight:"10px"}} className='fab fa-youtube icon'></i>
+            </span>
           </div>
         </div>
       </section>

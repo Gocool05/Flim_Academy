@@ -49,7 +49,7 @@ const CoursesCard = () => {
     firstname: '',
     lastname: '',
     contactNumber: '',
-    emailid: '',
+    email: '',
     age: '',
     gender: [],
     nationality: '',
@@ -107,7 +107,7 @@ const CoursesCard = () => {
         FirstName:formData.firstname,
         LastName:formData.lastname,
         MobileNumber:formData.contactNumber,
-        EmailId:formData.emailid,
+        EmailId:formData.email,
         Age:formData.age,
         gender:formData.gender,
         Nationality:formData.nationality,
@@ -289,7 +289,15 @@ const CoursesCard = () => {
       <TextField label="Last Name" name="lastname" value={formData.lastname} onChange={handleInputChange}  fullWidth required />
     </div>
       <TextField label="Mobile Number" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange}  fullWidth required />
-      <TextField label="Email Id" name="email" type="email" value={formData.emailid} onChange={handleInputChange}  fullWidth required />
+      <TextField
+          label="Your Mail Id"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          fullWidth
+          required
+        />         
 
     {/* Row 2 */}
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
@@ -315,9 +323,15 @@ const CoursesCard = () => {
         onChange={handleInputChange}
       >
         {/* Replace with your course options */}
-        <MenuItem value="Course1">Course 1</MenuItem>
-        <MenuItem value="Course2">Course 2</MenuItem>
-        <MenuItem value="Course3">Course 3</MenuItem>
+        <MenuItem value="Course1">Acting & Presentation</MenuItem>
+        <MenuItem value="Course2">Script & Screenplay Writing</MenuItem>
+        <MenuItem value="Course3">Cinematography & Lighting</MenuItem>
+        <MenuItem value="Course3">Film Making & Direction</MenuItem>
+        <MenuItem value="Course3">Filming & Video Editing</MenuItem>
+        <MenuItem value="Course3">Event Management</MenuItem>
+        <MenuItem value="Course3">Marketing / Business management</MenuItem>
+        <MenuItem value="Course3">Makeup / Cosmetology</MenuItem>
+        <MenuItem value="Course3">Pre & Post Production</MenuItem>
       </Select>
     </FormControl>
 

@@ -5,6 +5,8 @@ import "./blog.css"
 import { TextField, Chip,Button, Select, MenuItem, FormControl, InputLabel, Container, Typography, Box } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from "axios";
+import CircularProgress from '@mui/material/CircularProgress';
+
 import {
   Dialog,
   DialogTitle,
@@ -44,6 +46,8 @@ const Blog = () => {
   const [fileUploadProgress, setFileUploadProgress] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
+  const [buffer, setBuffer] = useState(20);
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -102,9 +106,6 @@ const Blog = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
-  };
-  const handleNextStep = () => {
-    setActiveStep((prevStep) => prevStep + 1);
   };
 
 
@@ -189,7 +190,7 @@ const Blog = () => {
     }
   
     // Reset progress before starting image uploads
-    setFileUploadProgress(0);
+    setFileUploadProgress(10);
   
     // Handle image uploads (assuming you have two imageUpload variables)
     const imageFormDatas = [imageUpload,imageUpload1];
@@ -234,10 +235,37 @@ const Blog = () => {
   
       // Update progress after each image upload
       setFileUploadProgress(((i + 1) / imageFormDatas.length) * 100);
+      setBuffer(((i + 1) / imageFormDatas.length) * 100);
+
     }
   
     // All uploads completed
     console.log('All uploads completed');
+    setOpenModal(false);
+  };
+
+  const handleNextStep = () => {
+    if (activeStep === 1 && videoUpload !== null) {
+      setActiveStep((prevStep) => prevStep + 1);
+    } else if (activeStep === 2 && imageUpload !== null) {
+      setActiveStep((prevStep) => prevStep + 1);
+    } else if (activeStep === 3 && imageUpload1 !== null) {
+      setActiveStep((prevStep) => prevStep + 1);
+    }
+  };
+
+
+  const isNextButtonEnabled = () => {
+    switch (activeStep) {
+      case 1:
+        return videoUpload !== null;
+      case 2:
+        return imageUpload !== null;
+      case 3:
+        return imageUpload1 !== null;
+      default:
+        return false;
+    }
   };
   
   return (
@@ -426,7 +454,7 @@ const Blog = () => {
       </ThemeProvider>
 
        <ThemeProvider theme={theme}>
-        <Dialog className="your-modal-class" open={openModal}>
+       <Dialog className="your-modal-class" open={openModal}>
           <DialogTitle className="dialog-title">Upload Your Content</DialogTitle>
           <DialogContent className="dialog-content">
             {activeStep === 1 && (
@@ -442,15 +470,17 @@ const Blog = () => {
                   className="file-input"
                   required
                 />
-                {/* Progress bar for video upload */}
-                <LinearProgress
+                {/* Circular progress bar for video upload */}
+                {/* <CircularProgress
                   className="dialog-progress"
                   variant="determinate"
                   color="success"
                   value={fileUploadProgress}
                 />
+                <p>{`${Math.round(fileUploadProgress)}%`}</p> */}
               </div>
             )}
+
             {activeStep === 2 && (
               <div className="upload-section">
                 <label htmlFor="poster-upload">Upload Poster:</label>
@@ -461,15 +491,17 @@ const Blog = () => {
                   onChange={handleImageUpload}
                   required
                 />
-                {/* Progress bar for poster upload */}
-                <LinearProgress
+                {/* Circular progress bar for poster upload */}
+                {/* <CircularProgress
                   className="dialog-progress"
                   variant="determinate"
                   color="success"
                   value={fileUploadProgress}
                 />
+                <p>{`${Math.round(fileUploadProgress)}%`}</p> */}
               </div>
             )}
+
             {activeStep === 3 && (
               <div className="upload-section">
                 <label htmlFor="thumbnail-upload">Upload Thumbnail:</label>
@@ -480,18 +512,23 @@ const Blog = () => {
                   onChange={handleImageUpload1}
                   required
                 />
-                {/* Progress bar for thumbnail upload */}
-                {/* <LinearProgress
+                {/* Circular progress bar for thumbnail upload */}
+                {/* <CircularProgress
                   className="dialog-progress"
                   variant="determinate"
                   color="success"
                   value={fileUploadProgress}
-                /> */}
+                />
+                <p>{`${Math.round(fileUploadProgress)}%`}</p> */}
               </div>
             )}
 
             {activeStep < 3 && (
-              <Button onClick={handleNextStep} color="success">
+              <Button
+                onClick={handleNextStep}
+                disabled={!isNextButtonEnabled()}
+                color="success"
+              >
                 Next
               </Button>
             )}
@@ -501,12 +538,17 @@ const Blog = () => {
                 {/* Display a progress bar based on fileUploadProgress */}
                 <LinearProgress
                   className="dialog-progress"
-                  variant="determinate"
-                  color="success"
+                  color="secondary"
+                  fourColor
+                  variant="buffer"
                   value={fileUploadProgress}
                 />
 
-                <Button onClick={handleUpload} className="button-36">
+                <Button
+                  onClick={handleUpload}
+                  color="secondary"
+                  className="button-36"
+                >
                   Submit
                 </Button>
               </>

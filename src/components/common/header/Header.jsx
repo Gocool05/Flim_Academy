@@ -19,9 +19,12 @@ const Header = () => {
 
   return (
     <>
-      <Head />
+      {/* <Head /> */}
       <header>
         <nav className='flexSB' style={{margin: "0px 0px 0px 30px"}}>
+        <div className='logo'>
+            <img src='https://res.cloudinary.com/dx78kzenz/image/upload/v1707112026/bf_logo_plospx.png' alt='' />
+          </div>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
               <Link to='/'>Home</Link>
@@ -44,22 +47,26 @@ const Header = () => {
             <li>
               <Link to='/contact'>Contact</Link>
             </li>
-            {/* <li>
-              <Link to='/Admin'>Admin</Link>
-            </li> */}
-          </ul>
-          <div className="Start1" >
-            {/* <div className='button' onClick={handleClick} >Contest</div>
-            <div className='button' onClick={handleClick} >Contest</div> */}
-            <ButtonGroup variant="filled"  className='start' aria-label="loading button group">
+            <div style={{marginRight: "100px"}}></div>
+            <li className="Startlist">
+            <span className="Start1">
+            <ButtonGroup  className='start' aria-label="loading button group">
             <Button className="button2" color="" onClick={handleClicks}>ADMISSION</Button>
             <Button ClassName="button2" color="" onClick={handleClick}>CONTEST</Button>
-            </ButtonGroup> 
-          </div>
+            </ButtonGroup>
+        </span>
+            </li>
+          </ul>
           <button className='toggle' onClick={() => setClick(!click)}>
             {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
           </button>
         </nav>
+        {/* <span className="Start1">
+            <ButtonGroup variant="filled"  className='start' aria-label="loading button group">
+            <Button className="button2" color="" onClick={handleClicks}>ADMISSION</Button>
+            <Button ClassName="button2" color="" onClick={handleClick}>CONTEST</Button>
+            </ButtonGroup>
+        </span> */}
       </header>
     </>
   )

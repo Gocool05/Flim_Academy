@@ -49,10 +49,10 @@ const HAbout = () => {
   const[response,SetResponse]=useState('')
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
- 
     firstname: '',
     lastname: '',
     contactNumber: '',
+    email: '',
     age: '',
     gender: [],
     nationality: '',
@@ -109,6 +109,7 @@ const HAbout = () => {
         FirstName:formData.firstname,
         LastName:formData.lastname,
         MobileNumber:formData.contactNumber,
+        EmailId:formData.email,
         Age:formData.age,
         gender:formData.gender,
         Nationality:formData.nationality,
@@ -258,13 +259,20 @@ const HAbout = () => {
         <DialogTitle style={{backgroundColor: '#C5C6C7',color: '#1F2833',fontWeight: 'bold'}} >ENROLLMENT FORM</DialogTitle>
         <DialogContent style={{backgroundColor: '#C5C6C7'}} color="secondary">
   <form className="form" style={{ display: 'grid', gap: '16px' }}>
-
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',marginTop:'20px' }}>
       <TextField label="First Name" name="firstname" value={formData.firstname} onChange={handleInputChange}  fullWidth required />
       <TextField label="Last Name" name="lastname" value={formData.lastname} onChange={handleInputChange}  fullWidth required />
     </div>
       <TextField label="Mobile Number" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange}  fullWidth required />
-
+      <TextField
+          label="Your Email"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          fullWidth
+          required
+        />                  
 
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
       <TextField label="Age" name="age" value={formData.age} onChange={handleInputChange}  fullWidth required />
@@ -286,9 +294,15 @@ const HAbout = () => {
         onChange={handleInputChange}
       >
 
-        <MenuItem value="Course1">Course 1</MenuItem>
-        <MenuItem value="Course2">Course 2</MenuItem>
-        <MenuItem value="Course3">Course 3</MenuItem>
+<MenuItem value="Course1">Acting & Presentation</MenuItem>
+        <MenuItem value="Course2">Script & Screenplay Writing</MenuItem>
+        <MenuItem value="Course3">Cinematography & Lighting</MenuItem>
+        <MenuItem value="Course3">Film Making & Direction</MenuItem>
+        <MenuItem value="Course3">Filming & Video Editing</MenuItem>
+        <MenuItem value="Course3">Event Management</MenuItem>
+        <MenuItem value="Course3">Marketing / Business management</MenuItem>
+        <MenuItem value="Course3">Makeup / Cosmetology</MenuItem>
+        <MenuItem value="Course3">Pre & Post Production</MenuItem>
       </Select>
     </FormControl>
 

@@ -42,24 +42,11 @@ export const awrapper = [
   },
 ]
 export const coursesCard = [
-  {
-    id: 1,
-    cover: "../images/courses/c1.png",
-    coursesName: "Film Making & Direction",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by John Smith",
-        totalTime: "50 lectures (190 hrs)",
-      },
-    ],
-    priceAll: "$100 All Course",
-    pricePer: "$15 per month",
-  },
+  
   {
     id: 2,
     cover: "../images/courses/c2.png",
-    coursesName: "Cinematography & Lighting",
+    coursesName: "Script & Screenplay Writing",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -72,8 +59,8 @@ export const coursesCard = [
   },
   {
     id: 3,
-    cover: "../images/courses/c5.png",
-    coursesName: "Script & Screenplay Writing",
+    cover: "./images/courses/online/o10.1.png",
+    coursesName: "Cinematography & Lighting",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -88,7 +75,7 @@ export const coursesCard = [
   {
     id: 4,
     cover: "../images/courses/c3.png",
-    coursesName: "Film & Video Editing",
+    coursesName: "Film Making & Direction",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -100,9 +87,23 @@ export const coursesCard = [
     pricePer: "$5 per month",
   },
   {
+    id: 1,
+    cover: "../images/courses/c1.png",
+    coursesName: "Acting & Presentation",
+    courTeacher: [
+      {
+        dcover: "./images/back.webp",
+        name: "by John Smith",
+        totalTime: "50 lectures (190 hrs)",
+      },
+    ],
+    priceAll: "$100 All Course",
+    pricePer: "$15 per month",
+  },
+  {
     id: 5,
-    cover: "../images/courses/c4.png",
-    coursesName: "VFX (Visual Effects)",
+    cover: "../images/courses/online/o10.1.png",
+    coursesName: "Filming & Video Editing",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -116,8 +117,8 @@ export const coursesCard = [
  
   {
     id: 6,
-    cover: "../images/courses/c6.png",
-    coursesName: "Acting & Presentation",
+    cover: "./images/courses/online/o11.1.png",
+    coursesName: "Event Management",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -130,8 +131,8 @@ export const coursesCard = [
   },
   {
     id: 7,
-    cover: "../images/courses/c7.png",
-    coursesName: "Film Sound Recording Audio Post Production",
+    cover: "./images/courses/online/o11.1.png",
+    coursesName: "Marketing / Business management",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -144,8 +145,8 @@ export const coursesCard = [
   },
   {
     id: 8,
-    cover: "../images/courses/c8.png",
-    coursesName: "Classical & Playback Singing",
+    cover: "./images/courses/online/o2.1.png",
+    coursesName: "Makeup / Cosmetology",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -158,22 +159,8 @@ export const coursesCard = [
   },
   {
     id: 9,
-    cover: "../images/courses/c9.png",
+    cover: "./images/courses/online/o6.1.png",
     coursesName: "Pre- and post-production",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Petter",
-        totalTime: "50 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$20 All Course",
-    pricePer: "$3 per month",
-  },
-  {
-    id: 10,
-    cover: "../images/courses/c9.png",
-    coursesName: "Audio & Sound Engineering",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -187,8 +174,8 @@ export const coursesCard = [
 ]
 export const online = [
   {
-    cover: "./images/courses/online/o1.png",
-    hoverCover: "./images/courses/online/o1.1.png",
+    cover: "./images/courses/online/o9.png",
+    hoverCover: "./images/courses/online/o9.1.png",
     courseName: "Screenwriter",
     course: "25 Openings",
   },
@@ -211,6 +198,12 @@ export const online = [
     course: "15 Openings",
   },
   {
+    cover: "./images/courses/online/o11.png",
+    hoverCover: "./images/courses/online/o11.1.png",
+    courseName: "Event planner",
+    course: "17 Openings",
+  },
+  {
     cover: "./images/courses/online/o5.png",
     hoverCover: "./images/courses/online/o5.1.png",
     courseName: "Publicist",
@@ -225,7 +218,7 @@ export const online = [
   {
     cover: "./images/courses/online/o7.png",
     hoverCover: "./images/courses/online/o7.1.png",
-    courseName: "Video archivist",
+    courseName: "Makeup Artist",
     course: "10 Openings",
   },
   {
@@ -246,16 +239,11 @@ export const online = [
     courseName: "Sound designer",
     course: "12 Openings",
   },
+ 
   {
     cover: "./images/courses/online/o11.png",
     hoverCover: "./images/courses/online/o11.1.png",
-    courseName: "Event planner",
-    course: "17 Openings",
-  },
-  {
-    cover: "./images/courses/online/o12.png",
-    hoverCover: "./images/courses/online/o12.1.png",
-    courseName: "Lighting designer",
+    courseName: "Business Manager",
     course: "17 Openings",
   },
 ]

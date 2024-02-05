@@ -1,4 +1,6 @@
 import "./App.css"
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from "./components/common/header/Header"
 import About from "./components/about/About"
 import CourseHome from "./components/allcourses/CourseHome"
@@ -13,13 +15,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Gallery from "./components/Gallery/Gallery"
 import EnrollmentModal from "./components/common/EnrollNow/Enroll"
 import { ModalProvider } from "./ModalContext"
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
+
   return (
     <>
-      
       <Router>
         <Header />
+          <ScrollToTop/>
         <Switch>
         <ModalProvider>
           <Route exact path='/' component={Home} />
