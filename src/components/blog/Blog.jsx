@@ -271,7 +271,7 @@ const Blog = () => {
   return (
     <>
     <ThemeProvider theme={theme}>
-      <Back title='Contribute now' />
+      <Back title='Compete now' />
       <section className='blog padding'>
       <Container sx={{backgroundColor: '#C5C6C7', padding: '20px'}}>
       <Typography  variant="h4" gutterBottom>
