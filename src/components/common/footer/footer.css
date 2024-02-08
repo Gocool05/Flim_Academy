@@ -87,13 +87,13 @@ footer .container {
 
   @keyframes combinedAnimation {
     0% {
-      transform: translateY(-100%) rotate(0deg);
+      transform: translateY(-100vw) rotate(0deg);
     }
     50% {
       transform: translateY(100vw) rotate(180deg);
     }
     100% {
-      transform: translateY(-100%) rotate(360deg);
+      transform: translateY(-100vw) rotate(360deg);
     }
   }
   #filmReel {
