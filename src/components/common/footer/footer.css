@@ -47,7 +47,61 @@ footer .container {
   width: 250px;
   height: auto;
 }
+
+
+@keyframes moveFilmReel {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes combinedAnimation {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100vw) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-100%) rotate(360deg);
+  }
+}
+
+#filmReel {
+  width: 100px; 
+  /* animation: moveFilmReel 3s infinite alternate,spin 2s linear infinite; */
+  animation: combinedAnimation 5s linear infinite;
+}
 @media screen and (max-width: 768px) {
+
+  @keyframes combinedAnimation {
+    0% {
+      transform: translateY(-100%) rotate(0deg);
+    }
+    50% {
+      transform: translateY(100vw) rotate(180deg);
+    }
+    100% {
+      transform: translateY(-100%) rotate(360deg);
+    }
+  }
+  #filmReel {
+    width: 100px; 
+    /* animation: moveFilmReel 3s infinite alternate,spin 2s linear infinite; */
+    animation: combinedAnimation 3s linear infinite;
+  }
+
   footer .container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -129,6 +183,11 @@ footer .last i {
 .legal i {
   color: #66FCF1;
 }
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .newletter .right{
     flex-direction: column;

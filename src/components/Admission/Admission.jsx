@@ -48,6 +48,8 @@ const Admission = () => {
       </Paper>
 
       {/* Admission Form */}
+      {/* <Grid  spacing={2}  >
+      <Grid item xs={12} md={6} lg={6} > */}
       <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
         <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
           What do you need for your Admission
@@ -73,7 +75,9 @@ const Admission = () => {
           <br/>
         </ul>
       </Paper>
-      <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
+    {/* </Grid> */}
+    {/* <Grid item xs={12} md={6} lg={6} > */}
+         <Paper className='Admission-paper' elevation={3} style={{ padding: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
         <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
         ELIGIBILITY
         </Typography>
@@ -101,6 +105,11 @@ const Admission = () => {
           <br/>
         </ul>
       </Paper>
+      {/* </Grid>
+      </Grid> */}
+
+
+
       <Paper elevation={3} style={{ padding: 20, marginTop: 20, marginBottom: 20 ,background: '#C5C6C7', color: '#1F2833' }}>
         <Typography  gutterBottom className='admission-heading' style={{fontWeight: 'bold',fontSize: 30}}>
         MEDIUM
@@ -117,6 +126,7 @@ const Admission = () => {
         Each course consists practical and theory classes from Monday to Friday(excluding holidays). Each student should have 90% attendance. Each course will carry individual theory and practical exams. If students fail in any one, he/she has to repeat the theory and practical in the forth coming year/session.
         </Typography>
       </Paper>
+
 
       {/* Eligibility, Medium, Attendance, and Highlights Table */}
       <TableContainer component={Paper} className={classes.tableContainer}>

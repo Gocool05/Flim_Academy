@@ -118,16 +118,15 @@ const Footer = () => {
         </DialogContent>
       </Dialog>
       </ThemeProvider>
-        <div className='container flexSB'>
-          <div className='left row'>
-            <h1>Newsletter - Stay tune and get the latest update</h1>
-            <span>Far far away, behind the word mountains</span>
-          </div>
-          <div className='right row'>
-            <input type='text' placeholder='Enter email address' />
-            <i className='fa fa-paper-plane'></i>
-          </div>
-        </div>
+      <div class='container flexSB'>
+      <div class='left row'>
+       <h1>To learn directly from the Masters of Film Industry is the biggest advantage at BFFTA.</h1>
+            <button  onClick={navigateToCourses}> Explore Courses</button>
+  </div>
+  <div class='right row'>
+    <img src="https://res.cloudinary.com/dx78kzenz/image/upload/v1707302381/pngegg_xypwl9.png" id='filmReel' alt="Film Reel" />
+  </div>
+</div>
       </section>
       <footer>
         <div className='container padding'>

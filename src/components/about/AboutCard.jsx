@@ -13,7 +13,7 @@ const AboutCard = () => {
             <img src='./images/flim.png' alt='' />
           </div>
           <div className='right row'>
-            <Heading subtitle='LEARN ANYTHING' title='Benefits About Online Learning Expertise' />
+            <Heading subtitle='LEARN ANYTHING' title='Benefits About BFFTA Learning Expertise' />
             <div className='items'>
               {homeAbout.map((val) => {
                 return (

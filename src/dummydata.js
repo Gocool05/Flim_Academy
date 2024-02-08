@@ -309,28 +309,32 @@ export const price = [
 ]
 export const faq = [
   {
-    title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "What is Bright Future Film Tech Academy?",
+    desc: "Bright Future Film Tech Academy (BFFTA) is a distinguished film institute situated in Chennai, dedicated to imparting comprehensive training in the art and skills of Screenplay Writing-Direction, Cinematography, and Film Editing",
   },
   {
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "Who is this courses built for?",
+    desc: "This course is built for anyone interested in making films. Whether you’re a beginner making your first short, a photographer or journalist venturing into video, or a videographer looking to make films, BFFTA is here to help.",
   },
   {
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "I have a question that isn’t listed here.",
+    desc: "No worries! Just send us a message at brightfuturefilmtechacademy.com and we'll get back to you asap!",
   },
   {
-    title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "What is your refund policy?",
+    desc: "We offer a risk-free experience and will give a full refund up to and including the first day of the workshop.  After the first day, refunds are prorated on a daily basis.",
   },
   {
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "What are the working hours at the Academy ?",
+    desc: "The Academy functions from 10:00 a.m. to 5:00 p.m. (IST) from Monday to Saturday. Various labs/ studios work extended hours also depending upon the requirement of the batches.",
   },
   {
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "How experienced your trainers/ faculties ?",
+    desc: "The Academy have employed only those professionals as trainer & faculty who are master of their respective fields. All our trainees have years of experience with them to share with students.",
+  },
+  {
+    title: "Are you providing hostel/ stay facilities for outstations & international students?",
+    desc: "The Academy does not offer or provide such facilities. However, the management may arrange such facility separately for boys & girls candidates on prior request are very close to residential areas. Please contact us for more details.",
   },
 ]
 export const blog = [
