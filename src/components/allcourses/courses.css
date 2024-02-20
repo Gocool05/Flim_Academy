@@ -8,6 +8,11 @@
   background-color: #C5C6C7;
   padding: 30px;
   text-align: center;
+  border-radius: 20px;
+}
+
+.coursesCard .items:hover {
+ border-radius: 0%;
 }
 
 .coursesCard .img {
@@ -29,6 +34,7 @@
 .coursesCard .text h1 {
   font-size: 30px;
   font-weight: 500;
+  height: 110px;
   line-height: 45px;
   color: #1F2833;
 }
@@ -107,6 +113,7 @@
   background-color: #66FCF1;
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 20px;
 }
 .online .box:hover .show {
   opacity: 1;
@@ -130,7 +137,9 @@
   }
   .coursesCard .text h1{
     font-size: 25px;
+    height: auto;
   }
+  
   .form{
     width: 100%;
   }

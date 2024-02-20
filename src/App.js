@@ -1,48 +1,54 @@
-import "./App.css"
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import Header from "./components/common/header/Header"
-import About from "./components/about/About"
-import CourseHome from "./components/allcourses/CourseHome"
-import Team from "./components/team/Team"
-import Pricing from "./components/pricing/Pricing"
-import Blog from "./components/blog/Blog"
-import Contact from "./components/contact/Contact"
-import Footer from "./components/common/footer/Footer"
-import Home from "./components/home/Home"
-import Admission from "./components/Admission/Admission"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Gallery from "./components/Gallery/Gallery"
-import EnrollmentModal from "./components/common/EnrollNow/Enroll"
-import { ModalProvider } from "./ModalContext"
+import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from "./components/common/header/Header";
+import About from "./components/about/About";
+import CourseHome from "./components/allcourses/CourseHome";
+import Team from "./components/team/Team";
+import Pricing from "./components/pricing/Pricing";
+import Blog from "./components/blog/Blog";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/common/footer/Footer";
+import Home from "./components/home/Home";
+import Admission from "./components/Admission/Admission";
+import Gallery from "./components/Gallery/Gallery";
+import EnrollmentModal from "./components/common/EnrollNow/Enroll";
+import { Login } from "./components/Login/Login";
+import GoogleAuthCallback from "./components/GoogleAuthCallback";
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
-
+  const login = localStorage.getItem('islogin');
   return (
-    <>
-      <Router>
-        <Header />
-          <ScrollToTop/>
-        <Switch>
-        <ModalProvider>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/courses' component={CourseHome} />
-          <Route exact path='/team' component={Team} />
-          <Route exact path='/faq' component={Pricing} />
-          <Route exact path='/contest' component={Blog} />
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/Admission' component={Admission} />
-          <Route exact path='/Gallery' component={Gallery} />
-          <Route exact path='/Enroll' component={EnrollmentModal} />
-          </ModalProvider>
-        </Switch>
-        <Footer />
-      </Router>
-      
-    </>
-  )
+    <Router>
+      <div>
+        {login ? (
+          <>
+            <Header />
+            <ScrollToTop />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/courses' element={<CourseHome />} />
+              <Route path='/team' element={<Team />} />
+              <Route path='/faq' element={<Pricing />} />
+              <Route path='/contest' element={<Blog />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/Admission' element={<Admission />} />
+              <Route path='/Gallery' element={<Gallery />} />
+              <Route path='/Enroll' element={<EnrollmentModal />} />
+            </Routes>
+            <Footer />
+          </>
+        ) : (
+          <Routes>
+            <Route path='/Auth' element={<GoogleAuthCallback />} />
+            <Route path='/' element={<Login />} />
+          </Routes>
+        )}
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -10,7 +10,7 @@ const AboutCard = () => {
       <section className='aboutHome'>
         <div className='container flexSB'>
           <div className='left row'>
-            <img src='./images/flim.png' alt='' />
+            <img src='https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411924/Bright%20Future%20Gallery/flim_1_dehsi1.png' alt='' />
           </div>
           <div className='right row'>
             <Heading subtitle='LEARN ANYTHING' title='Benefits About BFFTA Learning Expertise' />

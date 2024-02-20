@@ -6,6 +6,8 @@ import { TextField, Chip,Button, Select, MenuItem, FormControl, InputLabel, Cont
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from "axios";
 import CircularProgress from '@mui/material/CircularProgress';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 import {
   Dialog,
@@ -47,8 +49,11 @@ const Blog = () => {
   const [openModal, setOpenModal] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
   const [buffer, setBuffer] = useState(20);
-  
+  const [showAlert, setShowAlert] = useState(false);
 
+
+
+    
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     switch (name) {
@@ -108,6 +113,38 @@ const Blog = () => {
     setOpenModal(false);
   };
 
+  const handlePayment = async(e)=>{
+    
+    e.preventDefault();
+     const amount = 1000;
+      var options = {
+        key: "rzp_test_CqbzQKAn3Mm2Ol",
+        key_secret:"G4ueEdy441wU3S039jtx7Rz4",
+        amount: amount *100,
+        currency:"INR",
+        name:"Bright Future Flim Tech Academy",
+        description:"for testing purpose",
+        handler:  function (Paymentresponse){
+          handleUpload();
+        //  handleData(Paymentresponse);
+        //  handleEnroll();
+        
+        },
+        prefill: {
+          name:"GOCOOL",
+          email:"GOCOOL@gmail.com",
+          contact:"8888888888"
+        },
+        notes:{
+          address:"Razorpay Corporate office"
+        },
+        theme: {
+          color:"#3399cc"
+        }
+      };
+      var pay = new window.Razorpay(options);
+      pay.open();
+    }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -190,6 +227,7 @@ const Blog = () => {
     }
   
     // Reset progress before starting image uploads
+    setShowAlert(true);
     setFileUploadProgress(10);
   
     // Handle image uploads (assuming you have two imageUpload variables)
@@ -227,6 +265,7 @@ const Blog = () => {
         });
   
         // Handle success or error for each image upload
+        console.log('All uploads completed');
         console.log(`Image ${i + 1} upload response:`, imageResponse);
       } catch (error) {
         console.error(`Error uploading image ${i + 1}:`, error);
@@ -240,7 +279,8 @@ const Blog = () => {
     }
   
     // All uploads completed
-    console.log('All uploads completed');
+    
+
     setOpenModal(false);
   };
 
@@ -268,6 +308,9 @@ const Blog = () => {
     }
   };
   
+ 
+
+
   return (
     <>
     <ThemeProvider theme={theme}>
@@ -470,14 +513,7 @@ const Blog = () => {
                   className="file-input"
                   required
                 />
-                {/* Circular progress bar for video upload */}
-                {/* <CircularProgress
-                  className="dialog-progress"
-                  variant="determinate"
-                  color="success"
-                  value={fileUploadProgress}
-                />
-                <p>{`${Math.round(fileUploadProgress)}%`}</p> */}
+               
               </div>
             )}
 
@@ -531,30 +567,40 @@ const Blog = () => {
               >
                 Next
               </Button>
-            )}
-
+              
+            )
+            }
+               
             {activeStep === 3 && (
               <>
                 {/* Display a progress bar based on fileUploadProgress */}
+                
                 <LinearProgress
                   className="dialog-progress"
                   color="secondary"
                   fourColor
                   variant="buffer"
+                  style={{ height: '10px' }}
                   value={fileUploadProgress}
+                  valueBuffer={fileUploadProgress}
                 />
+                 <Snackbar open={showAlert} autoHideDuration={null}>
+                  <Alert severity="secondary" variant="filled" sx={{ width: '100%' }}>
+                    Files are being uploaded, please wait...
+                  </Alert>
+                </Snackbar>
 
-                <Button
-                  onClick={handleUpload}
+                <button
+                  onClick={handlePayment}
                   color="secondary"
                   className="button-36"
                 >
                   Submit
-                </Button>
+                </button>
               </>
             )}
 
-            <Button onClick={handleCloseModal} color="success">
+            <Button onClick={handleCloseModal} color="secondary">
               Cancel
             </Button>
           </DialogContent>

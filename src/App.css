@@ -100,10 +100,11 @@ p {
     line-height: 50px;
   }
 }
+.back-title{
 
+}
 .back {
-  background-image: url("../public/images/bg2.jpg");
-  /* background-image: url("https://res.cloudinary.com/dx78kzenz/image/upload/v1706088850/background1_xjowdr.jpg"); */
+  background-image: url("https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411948/Bright%20Future%20Gallery/bg2_q2d7ed.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: absolute;
@@ -115,8 +116,7 @@ p {
   z-index: -1;
   width: 100%;
   height: 100vh;
-  padding-top: 30%;
-  /* padding-right: 50px; */
+  padding-top: 23%;
   color: #66FCF1;
   text-align: center;
 }
@@ -262,7 +262,6 @@ p {
   .back h2 {
     font-weight: 500;
     font-size: 20px;
-    margin-top: 150px;
     color: #C5C6C7;
     text-transform: uppercase;
   }

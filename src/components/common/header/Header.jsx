@@ -2,19 +2,19 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Head from "./Head"
 import "./header.css"
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { useNavigate } from "react-router-dom"
 import ButtonGroup from '@mui/material-next/ButtonGroup';
 import { Button } from "@mui/material-next"
 
 
 const Header = () => {
   const [click, setClick] = useState(false)
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleClick = () => {
-    history.push('/contest');
+    navigate('/contest');
   };
   const handleClicks = () => {
-    history.push('/Admission');
+    navigate('/Admission');
   };
 
   return (
@@ -30,19 +30,22 @@ const Header = () => {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
               <Link to='/courses'>All Courses</Link>
             </li>
+
+            <li>
+              <Link to='/Gallery'>Gallery</Link>
+            </li>
+
+            <li>
+              <Link to='/faq'>FAQ's</Link>
+            </li>
+
             <li>
               <Link to='/team'>Team</Link>
             </li>
             <li>
-              <Link to='/faq'>FAQ's</Link>
-            </li>
-            <li>
-              <Link to='/Gallery'>Gallery</Link>
+              <Link to='/about'>About</Link>
             </li>
             <li>
               <Link to='/contact'>Contact</Link>

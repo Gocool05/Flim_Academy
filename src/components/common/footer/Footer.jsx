@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react"
 import { blog } from "../../../dummydata"
 import "./footer.css"
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import EnrollmentModal from "../EnrollNow/Enroll";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -32,37 +32,37 @@ const Footer = () => {
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [enrollmentModalOpen, setEnrollmentModalOpen] = useState(false);
   const [Enrollment, setEnrollment] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const navigateToAboutUs = () => {
-    history.push('/about');
+    navigate('/about');
   };
   const navigateToHome = () => {
-    history.push('/');
+    navigate('/');
   };
   const navigateToGallery = () => {
-    history.push('/Gallery');
+    navigate('/Gallery');
   };
   const navigateToCourses = () => {
-    history.push('/courses');
+    navigate('/courses');
   };
   const navigateToFaq = () => {
-    history.push('/faq');
+    navigate('/faq');
   };
   const navigateToAdmission = () => {
-    history.push('/Admission');
+    navigate('/Admission');
   };
   const navigateToTeam = () => {
-    history.push('/team');
+    navigate('/team');
   };
 
   const navigateToContact = () => {
-    history.push('/contact');
+    navigate('/contact');
   };
 
   const navigateToContest = () => {
-    history.push('/contest');
+    navigate('/contest');
   };
 
   

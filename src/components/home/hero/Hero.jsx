@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const Hero = () => {
-  const history = useHistory();
+  const history = useNavigate();
 
   const navigateToAboutUs = () => {
     history.push('/about');

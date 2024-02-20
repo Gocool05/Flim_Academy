@@ -1,7 +1,5 @@
 import React,{useState,useEffect} from "react"
 import "./courses.css"
-import { coursesCard } from "../../dummydata"
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import {
@@ -26,6 +24,7 @@ import {
 
 
 import axios from "axios";
+import { Await } from "react-router-dom";
 const theme = createTheme({
   palette: {
     primary: {
@@ -44,6 +43,7 @@ const CoursesCard = () => {
   const [open, setOpen] = React.useState(false);
   const[response,SetResponse]=useState('')
   const [isOpen, setIsOpen] = useState(false);
+  const [courseList, setCourseList] = useState([]);
   const [formData, setFormData] = useState({
  
     firstname: '',
@@ -199,53 +199,63 @@ const CoursesCard = () => {
       };
   }
 
-  // const handleSubmit = () => {
-  //   handleEnrollment();
-  //   handlePayment();
-  // };
+  useEffect(() => {
+  const handleCourseList = async() =>{
+  try {
+    const response = await fetch('http://localhost:1337/api/course-cards');
+    // console.log(response);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    console.log('hi',data); 
+    setCourseList(data.data);
+    console.log('hey',courseList);
+  } catch (error) {
+    console.error('Error fetching data:', error.message);
+  }
+ };
+//  useEffect(() => {
+  handleCourseList();
+}, []);
+
 
   return (
     <>
       <section className='coursesCard'>
         <div className='container grid2'>
-          {coursesCard.map((val) => (
+          {courseList.map((val) => (
             <div className='items'>
               <div className='content flex'>
                 <div className='left'>
                   <div className='img'>
-                    <img src={val.cover} alt='' />
+                    <img src={val.cardImage} alt='' />
                   </div>
                 </div>
                 <div className='text'>
-                  <h1>{val.coursesName}</h1>
+                  <h1>{val.attributes.CourseName}</h1>
                   <div className='rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <label htmlFor=''>(5.0)</label>
+                     {Array.from({ length: val.attributes.CourseRating }).map((_, index) => (
+                     <i key={index} className='fa fa-star'></i>
+                ))}
+                <label htmlFor=''>{`(${val.attributes.CourseRating})`}</label>
                   </div>
                   <div className='details'>
-                    {val.courTeacher.map((details) => (
-                      <>
                         <div className='box'>
                           <div className='dimg'>
-                            <img src={details.dcover} alt='' />
+                            <img src={val.attributes.cardImage} alt='' />
                           </div>
                           <div className='para'>
-                            <h4>{details.name}</h4>
+                            <h4>{val.attributes.StaffName}</h4>
                           </div>
                         </div>
-                        <span>{details.totalTime}</span>
-                      </>
-                    ))}
+                        <span>{val.attributes.CourseDuration}</span>
                   </div>
                 </div>
               </div>
               <div className='price'>
                 <h3>
-                  {val.priceAll} / {val.pricePer}
+                ₹{val.attributes.CourseFee} + GST
                 </h3>
               </div>
               <button onClick={handleEnrollClick} className='outline-btn'>ENROLL NOW !</button>
@@ -303,7 +313,7 @@ const CoursesCard = () => {
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
       <TextField label="Age" name="age" value={formData.age} onChange={handleInputChange}  fullWidth required />
       <TextField label="Qualification" name="qualification" value={formData.qualification} onChange={handleInputChange} fullWidth required />
-    </div>
+    </div>  
 
     {/* Row 3 */}
     <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
@@ -323,15 +333,15 @@ const CoursesCard = () => {
         onChange={handleInputChange}
       >
         {/* Replace with your course options */}
-        <MenuItem value="Course1">Acting & Presentation</MenuItem>
-        <MenuItem value="Course2">Script & Screenplay Writing</MenuItem>
-        <MenuItem value="Course3">Cinematography & Lighting</MenuItem>
-        <MenuItem value="Course3">Film Making & Direction</MenuItem>
-        <MenuItem value="Course3">Filming & Video Editing</MenuItem>
-        <MenuItem value="Course3">Event Management</MenuItem>
-        <MenuItem value="Course3">Marketing / Business management</MenuItem>
-        <MenuItem value="Course3">Makeup / Cosmetology</MenuItem>
-        <MenuItem value="Course3">Pre & Post Production</MenuItem>
+        <MenuItem value="Acting & Presentation">Acting & Presentation</MenuItem>
+        <MenuItem value="Script & Screenplay Writing">Script & Screenplay Writing</MenuItem>
+        <MenuItem value="Cinematography & Lighting">Cinematography & Lighting</MenuItem>
+        <MenuItem value="Film Making & Direction">Film Making & Direction</MenuItem>
+        <MenuItem value="Filming & Video Editing">Filming & Video Editing</MenuItem>
+        <MenuItem value="Event Management">Event Management</MenuItem>
+        <MenuItem value="Marketing / Business management">Marketing / Business management</MenuItem>
+        <MenuItem value="Makeup / Cosmetology">Makeup / Cosmetology</MenuItem>
+        <MenuItem value="Pre & Post Production">Pre & Post Production</MenuItem>
       </Select>
     </FormControl>
 

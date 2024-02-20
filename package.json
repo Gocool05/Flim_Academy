@@ -16,6 +16,7 @@
     "axios": "^1.6.5",
     "material-icons": "^1.10.11",
     "mdb-react-ui-kit": "^7.1.0",
+    "razorpay": "^2.9.2",
     "react": "^18.2.0",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^18.2.0",
@@ -23,12 +24,12 @@
     "react-image-viewer-dv": "^1.0.2",
     "react-modal": "^3.16.1",
     "react-photo-album": "^2.3.0",
-    "react-router-dom": "^5.3.4",
+    "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
-    "swiper": "^11.0.5",
+    "swiper": "^11.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
