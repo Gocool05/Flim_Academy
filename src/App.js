@@ -18,11 +18,11 @@ import GoogleAuthCallback from "./components/GoogleAuthCallback";
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
-  const login = localStorage.getItem('islogin');
+  // const login = localStorage.getItem('islogin');
   return (
     <Router>
       <div>
-        {login ? (
+        {/* {login ? ( */}
           <>
             <Header />
             <ScrollToTop />
@@ -40,12 +40,13 @@ function App() {
             </Routes>
             <Footer />
           </>
-        ) : (
+        ) 
+        {/* : (
           <Routes>
             <Route path='/Auth' element={<GoogleAuthCallback />} />
             <Route path='/' element={<Login />} />
           </Routes>
-        )}
+        )} */}
       </div>
     </Router>
   );
