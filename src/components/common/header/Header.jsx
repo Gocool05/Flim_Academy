@@ -54,8 +54,8 @@ const Header = () => {
             <li className="Startlist">
             <span className="Start1">
             <ButtonGroup  className='start' aria-label="loading button group">
-            <Button className="button2" color="" onClick={handleClicks}>ADMISSION</Button>
-            <Button ClassName="button2" color="" onClick={handleClick}>CONTEST</Button>
+            {/* <Button className="button2" color="" onClick={handleClicks}>ADMISSION</Button> */}
+            <Button ClassName="button2" color="" onClick={handleClick}>Apply Now</Button>
             </ButtonGroup>
         </span>
             </li>

@@ -24,7 +24,7 @@ const Gallery = () => {
 
   const DesktopSlider = (
     <>
-      <Back title="BFFTA Moments" />
+      {/* <Back title="BFFTA Moments" /> */}
       <section className="gallery">
         <div class="container">
           <div id="gallery">
@@ -67,6 +67,30 @@ const Gallery = () => {
               <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a6_cegvx1.jpg" />
               </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411419/Bright%20Future%20Gallery/a2_msnqd3.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a3_jahtbn.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a8_kym462.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a9_ol6orb.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a12_soaurt.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a7_mcyyxk.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a5_cqw7v2.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a13_x9dkqk.jpg" />
+              </SwiperSlide>
             </Swiper>
 
             <div className="section-title" style={{ marginTop: "40px" }}>
@@ -81,7 +105,7 @@ const Gallery = () => {
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
-              // centeredSlides={true}
+              centeredSlides={true}
               slidesPerView={"3"}
               coverflowEffect={{
                 rotate: 50,
@@ -98,59 +122,11 @@ const Gallery = () => {
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a1_vlfd07.jpg" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a12_soaurt.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a7_mcyyxk.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a5_cqw7v2.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a13_x9dkqk.jpg" />
-              </SwiperSlide>
-            </Swiper>
-            <div className="section-title" style={{ marginTop: "40px" }}>
-              <h2
-                className="Gallery-title"
-                style={{ textAlign: "center", marginBottom: "20px" }}
-              >
-                BF Isai Sangamam
-              </h2>
-            </div>
-
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              // centeredSlides={true}
-              slidesPerView={"3"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={true}
-              modules={[EffectCoverflow, Pagination, Autoplay]}
-              className="mySwiper1"
-            >
-              <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a4_zbd0pe.jpg" />
               </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411419/Bright%20Future%20Gallery/a2_msnqd3.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a3_jahtbn.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a8_kym462.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a9_ol6orb.jpg" />
-              </SwiperSlide>
+             
             </Swiper>
+           
             <div style={{ marginBottom: "50px" }}></div>
           </div>
         </div>
@@ -160,7 +136,7 @@ const Gallery = () => {
 
   const MobileSlider = (
     <>
-      <Back title="BFFTA Moments" />
+      {/* <Back title="BFFTA Moments" /> */}
       <section className="gallery">
         <div class="container">
           <div id="gallery">
@@ -186,10 +162,10 @@ const Gallery = () => {
         className="mySwiper2"
       >
           <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a10_tsfgwy.jpg" />
-              </SwiperSlide>
-                <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a14_rdqqck.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a10_tsfgwy.jpg" />
               </SwiperSlide>
               <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a11_s54twx.jpg" />
@@ -199,6 +175,30 @@ const Gallery = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a6_cegvx1.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411419/Bright%20Future%20Gallery/a2_msnqd3.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a3_jahtbn.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a8_kym462.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a9_ol6orb.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a12_soaurt.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a7_mcyyxk.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a5_cqw7v2.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a13_x9dkqk.jpg" />
               </SwiperSlide>
       </Swiper>
             <div className="section-title" style={{ marginTop: "40px" }}>
@@ -223,58 +223,13 @@ const Gallery = () => {
         className="mySwiper2"
       >
               <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a12_soaurt.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a1_vlfd07.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a7_mcyyxk.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a5_cqw7v2.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411421/Bright%20Future%20Gallery/a13_x9dkqk.jpg" />
-              </SwiperSlide>
-      </Swiper>
-            <div className="section-title" style={{ marginTop: "40px" }}>
-              <h2
-                className="Gallery-title"
-                style={{ textAlign: "center", marginBottom: "20px" }}
-              >
-                BF Isai Sangamam
-              </h2>
-            </div>
-            <Swiper
-        effect={'cube'}
-        grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-        pagination={true}
-        modules={[EffectCube, Pagination]}
-        className="mySwiper2"
-      >
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411419/Bright%20Future%20Gallery/a2_msnqd3.jpg" />
               </SwiperSlide>
               <SwiperSlide>
                 <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a4_zbd0pe.jpg" />
               </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a3_jahtbn.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a8_kym462.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://res.cloudinary.com/dtnbsrrar/image/upload/v1708411420/Bright%20Future%20Gallery/a9_ol6orb.jpg" />
-              </SwiperSlide>
       </Swiper>
+           
             <div style={{ marginBottom: "50px" }}></div>
           </div>
         </div>
