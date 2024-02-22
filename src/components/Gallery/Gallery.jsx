@@ -12,13 +12,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Gallery.css";
 import { color } from "@mui/system";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import 'swiper/css/effect-cube';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
-import { EffectCards } from 'swiper/modules';
+import { EffectCards,EffectCube } from 'swiper/modules';
 const Gallery = () => {
   const isMobile = window.innerWidth <= 768;
 
@@ -173,9 +173,16 @@ const Gallery = () => {
               </h2>
             </div>
             <Swiper
-        effect={'cards'}
+        effect={'cube'}
         grabCursor={true}
-        modules={[EffectCards]}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        pagination={true}
+        modules={[EffectCube, Pagination]}
         className="mySwiper2"
       >
           <SwiperSlide>
@@ -203,9 +210,16 @@ const Gallery = () => {
               </h2>
             </div>
             <Swiper
-        effect={'cards'}
+        effect={'cube'}
         grabCursor={true}
-        modules={[EffectCards]}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        pagination={true}
+        modules={[EffectCube, Pagination]}
         className="mySwiper2"
       >
               <SwiperSlide>
@@ -233,9 +247,16 @@ const Gallery = () => {
               </h2>
             </div>
             <Swiper
-        effect={'cards'}
+        effect={'cube'}
         grabCursor={true}
-        modules={[EffectCards]}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        pagination={true}
+        modules={[EffectCube, Pagination]}
         className="mySwiper2"
       >
               <SwiperSlide>
