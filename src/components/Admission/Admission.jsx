@@ -522,7 +522,6 @@ const Admission = () => {
 </DialogContent>
       </Dialog>
       </ThemeProvider>
-
     </>
 
   )

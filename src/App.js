@@ -1,5 +1,5 @@
 import "./App.css";
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/common/header/Header";
 import About from "./components/about/About";
@@ -16,8 +16,21 @@ import EnrollmentModal from "./components/common/EnrollNow/Enroll";
 import { Login } from "./components/Login/Login";
 import GoogleAuthCallback from "./components/GoogleAuthCallback";
 import ScrollToTop from "./ScrollToTop";
+import ImageModal from "./components/common/ImageModal/imageModal";
 
 function App() {
+
+  const [modalOpen, setModalOpen] = useState(true);
+
+  useEffect(() => {
+    // Close the modal after 5 seconds (adjust as needed)
+    const timeout = setTimeout(() => {
+      setModalOpen(false);
+    }, 10000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   // const login = localStorage.getItem('islogin');
   return (
     <Router>
@@ -26,6 +39,7 @@ function App() {
           <>
             <Header />
             <ScrollToTop />
+              <ImageModal open={modalOpen} onClose={() => setModalOpen(false)} />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />

@@ -1,0 +1,48 @@
+.image-modal-container {
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-align: center;
+    overflow: hidden; 
+    outline: none;
+    width: 400px;
+    height: auto; 
+}
+
+.image-modal {
+    width: 400px;
+    height: auto; 
+    z-index: -1;
+}
+
+.image-modal-button {
+    position: absolute;
+    bottom: 50px;
+    right: 0%;
+    transform: translatey(-50%);
+}
+
+@media screen and (max-width: 768px) {
+
+    .image-modal-container {
+         outline: none;
+         width: 300px;
+         height: auto; 
+     }
+     
+     .image-modal {
+         width: 300px;
+         height: auto; 
+      
+     }
+     
+     .image-modal-button {
+         position: absolute;
+         bottom: 40px;
+         right: 0%;
+         transform: translatey(-50%);
+     }
+
+}
